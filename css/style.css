@@ -3453,6 +3453,10 @@ body::after {
     flex-basis: 10rem;
     margin-top: .625rem
   }
+  .item-category-s__image {
+    height: 8.375rem;
+    width: 6.25%rem
+  }
 }
 @media (min-width:20em)and (max-width:80em) {
   @supports (padding:clamp(0.9375rem ,0.4166666667rem + 2.6041666667vw ,2.5rem)) {
