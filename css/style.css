@@ -3455,7 +3455,7 @@ body::after {
   }
   .item-category-s__image {
     height: 8.375rem;
-    width: 6.25%rem
+    width: 100%
   }
 }
 @media (min-width:20em)and (max-width:80em) {
