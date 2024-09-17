@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<title>Каталог</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20240917165455">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<div id="price-popup" aria-hidden="true" class="popup  popup--header">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<div class="popup-header">
+						<div class="popup-header__header">
+							<h3 class="popup-header__title">Прайс продукції</h3>
+							<button data-close class="popup-header__close _icon-popup-cross" aria-label="close popup" type="button"></button>
+						</div>
+						<div class="popup-header__body">
+							<div class="popup-header__aside">
+								<div class="popup-header__label">Даруємо знижку <span>-10%</span> на перше замовлення!</div>
+								<div class="popup-header__image" style="background-color: #FFE7DF;">
+									<!--<img src="" alt="Image" class="ibg">-->
+								</div>
+							</div>
+							<form action="#" method="post" enctype="multipart/form-data" class="popup-header__form form-popup-header">
+								<h4 class="form-popup-header__title">Заповніть дані, щоб завантажити прайс</h4>
+								<div class="form-popup-header__label">
+									Повний перелік продукції з цінами майже у вас
+								</div>
+								<div class="form-popup-header__input input">
+									<input required type="text" name="firstName" placeholder="Ваше ім'я">
+								</div>
+								<div class="form-popup-header__input input">
+									<input required type="text" name="phone" placeholder="Телефон">
+								</div>
+								<div class="form-popup-header__input input">
+									<input required type="email" name="firstName" placeholder="E-mail">
+								</div>
+								<div class="form-popup-header__label form-popup-header__label--manrope">
+									Натискаючи я все розумію, та згодний з <a href="#">політикою конфіденційності</a>
+								</div>
+								<button class="form-popup-header__button button">Отримати прайс</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="samples-popup" aria-hidden="true" class="popup  popup--header">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<div class="popup-header">
+						<div class="popup-header__header">
+							<h3 class="popup-header__title">Отримай безкоштовні зразки нашої продукції та консультацію!</h3>
+							<button data-close class="popup-header__close _icon-popup-cross" aria-label="close popup" type="button"></button>
+						</div>
+						<div class="popup-header__body">
+							<div class="popup-header__aside">
+								<div class="popup-header__image">
+									<img src="img/popups/samples.webp" alt="Image" class="ibg">
+								</div>
+							</div>
+							<form action="#" method="post" enctype="multipart/form-data" class="popup-header__form form-popup-header">
+								<h4 class="form-popup-header__title">Заповніть данні, щоб наш менеджер відправив вам зразки</h4>
+								<div class="form-popup-header__input input">
+									<input required type="text" name="firstName" placeholder="Ваше ім'я">
+								</div>
+								<div class="form-popup-header__input input">
+									<input required type="text" name="phone" placeholder="Телефон">
+								</div>
+								<div class="form-popup-header__input input">
+									<input required type="email" name="firstName" placeholder="E-mail">
+								</div>
+								<textarea class="form-popup-header__textarea textarea" placeholder="Які зразки вам надіслати ?" name="samples"></textarea>
+								<div class="form-popup-header__label form-popup-header__label--manrope">
+									Натискаючи я все розумію, та згодний з <a href="#">політикою конфіденційності</a>
+								</div>
+								<button class="form-popup-header__button button">Отримати зразки</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<header class="header">
+
+			<div class="header__top">
+				<div class="header__container">
+					<a href="#" class="header__logo">
+						<img src="img/logo.svg" alt="Image">
+					</a>
+					<nav class="header__menu menu">
+						<div data-da=".mobile-menu, 767.98, 3" class="menu__labels">
+							<button type="button" href="#" data-popup="#price-popup" class="menu__label-link menu__label-link--orange">Прайс</button>
+							<button type="button" href="#" data-popup="#samples-popup" class="menu__label-link">Безкоштовні
+								зразки</button>
+						</div>
+						<ul data-da=".mobile-menu, 1099.98, 1" class="menu__list">
+							<li class="menu__item">
+								<a href="#" class="menu__link">
+									Оптовому покупцю
+								</a>
+							</li>
+							<li class="menu__item">
+								<a href="#" class="menu__link">
+									Брендування
+								</a>
+							</li>
+							<li class="menu__item">
+								<a href="#" class="menu__link">
+									Контакти
+								</a>
+							</li>
+							<li class="menu__item">
+								<span class="desktop-only">Ще</span>
+								<ul class="menu__submenu submenu">
+									<li class="submenu__item">
+										<a href="#" class="submenu__link">Доставка та оплата</a>
+									</li>
+									<li class="submenu__item">
+										<a href="#" class="submenu__link">Повернення</a>
+									</li>
+									<li class="submenu__item">
+										<a href="#" class="submenu__link">Гарантії</a>
+									</li>
+									<li class="submenu__item">
+										<a href="#" class="submenu__link">Про нас</a>
+									</li>
+									<li class="submenu__item">
+										<a href="#" class="submenu__link">FAQ</a>
+									</li>
+									<li class="submenu__item">
+										<a href="#" class="submenu__link">Відгуки</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<div class="menu__lang">
+							<select name="form[]" data-class-modif="lang">
+								<option value="1" selected>UA</option>
+								<option value="2">EN</option>
+							</select>
+						</div>
+						<div data-spoilers data-spoilers-speed="300" class="header__contacts contacts-header">
+							<details class="contacts-header__item">
+								<summary data-spoiler-close class="contacts-header__title _icon-message"><span>+38 (068) 888-70-91</span>
+								</summary>
+								<div class="contacts-header__body">
+									<div class="contacts-header__block">
+										<a href="tel:380688887091" class="contacts-header__link">+38 (068) 888-70-91</a>
+									</div>
+									<div class="contacts-header__block">
+										<a href="mailto:hello@lookfort.com" class="contacts-header__link">hello@lookfort.com</a>
+									</div>
+									<div class="contacts-header__block">
+										<div class="contacts-header__social social-component">
+											<a href="#" class="social-component__item _icon-inst"></a>
+											<a href="#" class="social-component__item _icon-vbr"></a>
+											<a href="#" class="social-component__item _icon-tg"></a>
+											<a href="#" class="social-component__item _icon-msg"></a>
+										</div>
+									</div>
+									<div class="contacts-header__block contacts-header__block--no-mobile">
+										<div class="contacts-header__worktime">
+											з 8:00 до 20:00 без вихідних
+										</div>
+									</div>
+									<div class="contacts-header__block">
+										<form action="#" method="post" enctype="multipart/form-data" class="contacts-header__recall recall-header">
+											<div class="recall-header__label">Перетелефонувати вам?</div>
+											<div class="recall-header__input input">
+												<input name="phone" type="text" placeholder="Телефон">
+											</div>
+											<button type="button" class="recall-header__button button button--orange">Зателефонуйте</button>
+										</form>
+									</div>
+								</div>
+							</details>
+						</div>
+						<button data-da="div.mobile-navbar__item, 767.98, first" type="button" class="menu__icon icon-menu"><span></span></button>
+					</nav>
+				</div>
+			</div>
+			<div class="header__bottom">
+				<div class="header__container">
+					<div class="header__catalog catalog-header">
+						<button data-catalog-btn type="button" class="catalog-header__button button">
+							<div class="catalog-header__icon"><span></span></div>
+							Каталог
+						</button>
+						<div class="catalog-header__tabs">
+							<div data-tabs class="menu-catalog-h">
+								<nav data-tabs-titles class="menu-catalog-h__navigation">
+									<button type="button" class="menu-catalog-h__button _tab-active">За товарами</button>
+									<button type="button" class="menu-catalog-h__button">За типами бізнесу</button>
+								</nav>
+								<div data-tabs-body class="menu-catalog-h__content">
+									<div class="menu-catalog-h__body">
+										<div class="menu-catalog-h__item">
+											<span class="_icon-chevron-down">Одноразові стакани</span>
+											<div class="menu-catalog-h__submenu submenu-catalog-h">
+												<div class="submenu-catalog-h__body">
+													<div class="submenu-catalog-h__block">
+														<h4 class="submenu-catalog-h__title">Паперові стакани</h4>
+														<ul class="submenu-catalog-h__list">
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Гофровані стакани</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Двошарові стакани</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Крафтові стакани</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Бамбукові стакани</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Чорні одношарові стакани</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Білі одношарові стакани</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Одношарові стакани з малюнком</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Одношарові стакани ФЕЙС</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Одношарові стакани ЩІЧКИ</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Брендування паперових стаканів</a>
+															</li>
+														</ul>
+													</div>
+													<div class="submenu-catalog-h__block">
+														<h4 class="submenu-catalog-h__title">Пластикові стакани</h4>
+														<ul class="submenu-catalog-h__list">
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Склоподібні стакани</a>
+															</li>
+														</ul>
+													</div>
+													<div class="submenu-catalog-h__block">
+														<h4 class="submenu-catalog-h__title">Купольні стакани</h4>
+														<ul class="submenu-catalog-h__list">
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Купольні стакани Бабл Ті</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Купольні стакани LF</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Купольні стакани COVERIS</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Брендування купольних стаканів</a>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="menu-catalog-h__item">
+											<span class="_icon-chevron-down">Одноразові стакани</span>
+											<div class="menu-catalog-h__submenu submenu-catalog-h">
+												<div class="submenu-catalog-h__body">
+													<div class="submenu-catalog-h__block">
+														<h4 class="submenu-catalog-h__title">Паперові стакани</h4>
+														<ul class="submenu-catalog-h__list">
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Гофровані стакани</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Двошарові стакани</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Крафтові стакани</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Бамбукові стакани</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Чорні одношарові стакани</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Білі одношарові стакани</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Одношарові стакани з малюнком</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Одношарові стакани ФЕЙС</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Одношарові стакани ЩІЧКИ</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Брендування паперових стаканів</a>
+															</li>
+														</ul>
+													</div>
+													<div class="submenu-catalog-h__block">
+														<h4 class="submenu-catalog-h__title">Пластикові стакани</h4>
+														<ul class="submenu-catalog-h__list">
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Склоподібні стакани</a>
+															</li>
+														</ul>
+													</div>
+													<div class="submenu-catalog-h__block">
+														<h4 class="submenu-catalog-h__title">Купольні стакани</h4>
+														<ul class="submenu-catalog-h__list">
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Купольні стакани Бабл Ті</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Купольні стакани LF</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Купольні стакани COVERIS</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Брендування купольних стаканів</a>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="menu-catalog-h__item">
+											<span class="_icon-chevron-down">Одноразові стакани</span>
+											<div class="menu-catalog-h__submenu submenu-catalog-h">
+												<div class="submenu-catalog-h__body">
+													<div class="submenu-catalog-h__block">
+														<h4 class="submenu-catalog-h__title">Паперові стакани</h4>
+														<ul class="submenu-catalog-h__list">
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Гофровані стакани</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Двошарові стакани</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Крафтові стакани</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Бамбукові стакани</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Чорні одношарові стакани</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Білі одношарові стакани</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Одношарові стакани з малюнком</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Одношарові стакани ФЕЙС</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Одношарові стакани ЩІЧКИ</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Брендування паперових стаканів</a>
+															</li>
+														</ul>
+													</div>
+													<div class="submenu-catalog-h__block">
+														<h4 class="submenu-catalog-h__title">Пластикові стакани</h4>
+														<ul class="submenu-catalog-h__list">
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Склоподібні стакани</a>
+															</li>
+														</ul>
+													</div>
+													<div class="submenu-catalog-h__block">
+														<h4 class="submenu-catalog-h__title">Купольні стакани</h4>
+														<ul class="submenu-catalog-h__list">
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Купольні стакани Бабл Ті</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Купольні стакани LF</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Купольні стакани COVERIS</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Брендування купольних стаканів</a>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="menu-catalog-h__item menu-catalog-h__item--promo">
+											<span class="_icon-chevron-down">Акційні товари</span>
+											<div class="menu-catalog-h__submenu submenu-catalog-h">
+												<div class="submenu-catalog-h__body">
+													<div class="submenu-catalog-h__block">
+														<h4 class="submenu-catalog-h__title">Паперові стакани</h4>
+														<ul class="submenu-catalog-h__list">
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Гофровані стакани</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Двошарові стакани</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Крафтові стакани</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Бамбукові стакани</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Чорні одношарові стакани</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Білі одношарові стакани</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Одношарові стакани з малюнком</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Одношарові стакани ФЕЙС</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Одношарові стакани ЩІЧКИ</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Брендування паперових стаканів</a>
+															</li>
+														</ul>
+													</div>
+													<div class="submenu-catalog-h__block">
+														<h4 class="submenu-catalog-h__title">Пластикові стакани</h4>
+														<ul class="submenu-catalog-h__list">
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Склоподібні стакани</a>
+															</li>
+														</ul>
+													</div>
+													<div class="submenu-catalog-h__block">
+														<h4 class="submenu-catalog-h__title">Купольні стакани</h4>
+														<ul class="submenu-catalog-h__list">
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Купольні стакани Бабл Ті</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Купольні стакани LF</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Купольні стакани COVERIS</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Брендування купольних стаканів</a>
+															</li>
+														</ul>
+													</div>
+													<div class="submenu-catalog-h__block">
+														<h4 class="submenu-catalog-h__title">Паперові стакани</h4>
+														<ul class="submenu-catalog-h__list">
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Гофровані стакани</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Двошарові стакани</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Крафтові стакани</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Бамбукові стакани</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Чорні одношарові стакани</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Білі одношарові стакани</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Одношарові стакани з малюнком</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Одношарові стакани ФЕЙС</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Одношарові стакани ЩІЧКИ</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Брендування паперових стаканів</a>
+															</li>
+														</ul>
+													</div>
+													<div class="submenu-catalog-h__block">
+														<h4 class="submenu-catalog-h__title">Пластикові стакани</h4>
+														<ul class="submenu-catalog-h__list">
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Склоподібні стакани</a>
+															</li>
+														</ul>
+													</div>
+													<div class="submenu-catalog-h__block">
+														<h4 class="submenu-catalog-h__title">Купольні стакани</h4>
+														<ul class="submenu-catalog-h__list">
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Купольні стакани Бабл Ті</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Купольні стакани LF</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Купольні стакани COVERIS</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Брендування купольних стаканів</a>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="menu-catalog-h__body">
+										<div class="menu-catalog-h__item">
+											<span class="_icon-chevron-down">Одноразові стакани</span>
+											<div class="menu-catalog-h__submenu submenu-catalog-h">
+												<div class="submenu-catalog-h__body">
+													<div class="submenu-catalog-h__block">
+														<h4 class="submenu-catalog-h__title">Паперові стакани</h4>
+														<ul class="submenu-catalog-h__list">
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Гофровані стакани</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Двошарові стакани</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Крафтові стакани</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Бамбукові стакани</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Чорні одношарові стакани</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Білі одношарові стакани</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Одношарові стакани з малюнком</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Одношарові стакани ФЕЙС</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Одношарові стакани ЩІЧКИ</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Брендування паперових стаканів</a>
+															</li>
+														</ul>
+													</div>
+													<div class="submenu-catalog-h__block">
+														<h4 class="submenu-catalog-h__title">Пластикові стакани</h4>
+														<ul class="submenu-catalog-h__list">
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Склоподібні стакани</a>
+															</li>
+														</ul>
+													</div>
+													<div class="submenu-catalog-h__block">
+														<h4 class="submenu-catalog-h__title">Купольні стакани</h4>
+														<ul class="submenu-catalog-h__list">
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Купольні стакани Бабл Ті</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Купольні стакани LF</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Купольні стакани COVERIS</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Брендування купольних стаканів</a>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="menu-catalog-h__item">
+											<span class="_icon-chevron-down">Одноразові стакани</span>
+											<div class="menu-catalog-h__submenu submenu-catalog-h">
+												<div class="submenu-catalog-h__body">
+													<div class="submenu-catalog-h__block">
+														<h4 class="submenu-catalog-h__title">Паперові стакани</h4>
+														<ul class="submenu-catalog-h__list">
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Гофровані стакани</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Двошарові стакани</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Крафтові стакани</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Бамбукові стакани</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Чорні одношарові стакани</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Білі одношарові стакани</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Одношарові стакани з малюнком</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Одношарові стакани ФЕЙС</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Одношарові стакани ЩІЧКИ</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Брендування паперових стаканів</a>
+															</li>
+														</ul>
+													</div>
+													<div class="submenu-catalog-h__block">
+														<h4 class="submenu-catalog-h__title">Пластикові стакани</h4>
+														<ul class="submenu-catalog-h__list">
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Склоподібні стакани</a>
+															</li>
+														</ul>
+													</div>
+													<div class="submenu-catalog-h__block">
+														<h4 class="submenu-catalog-h__title">Купольні стакани</h4>
+														<ul class="submenu-catalog-h__list">
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Купольні стакани Бабл Ті</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Купольні стакани LF</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Купольні стакани COVERIS</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Брендування купольних стаканів</a>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="menu-catalog-h__item">
+											<span class="_icon-chevron-down">Одноразові стакани</span>
+											<div class="menu-catalog-h__submenu submenu-catalog-h">
+												<div class="submenu-catalog-h__body">
+													<div class="submenu-catalog-h__block">
+														<h4 class="submenu-catalog-h__title">Паперові стакани</h4>
+														<ul class="submenu-catalog-h__list">
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Гофровані стакани</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Двошарові стакани</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Крафтові стакани</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Бамбукові стакани</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Чорні одношарові стакани</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Білі одношарові стакани</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Одношарові стакани з малюнком</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Одношарові стакани ФЕЙС</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Одношарові стакани ЩІЧКИ</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Брендування паперових стаканів</a>
+															</li>
+														</ul>
+													</div>
+													<div class="submenu-catalog-h__block">
+														<h4 class="submenu-catalog-h__title">Пластикові стакани</h4>
+														<ul class="submenu-catalog-h__list">
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Склоподібні стакани</a>
+															</li>
+														</ul>
+													</div>
+													<div class="submenu-catalog-h__block">
+														<h4 class="submenu-catalog-h__title">Купольні стакани</h4>
+														<ul class="submenu-catalog-h__list">
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Купольні стакани Бабл Ті</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Купольні стакани LF</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Купольні стакани COVERIS</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Брендування купольних стаканів</a>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="menu-catalog-h__item menu-catalog-h__item--promo">
+											<span class="_icon-chevron-down">Акційні товари</span>
+											<div class="menu-catalog-h__submenu submenu-catalog-h">
+												<div class="submenu-catalog-h__body">
+													<div class="submenu-catalog-h__block">
+														<h4 class="submenu-catalog-h__title">Паперові стакани</h4>
+														<ul class="submenu-catalog-h__list">
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Гофровані стакани</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Двошарові стакани</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Крафтові стакани</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Бамбукові стакани</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Чорні одношарові стакани</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Білі одношарові стакани</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Одношарові стакани з малюнком</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Одношарові стакани ФЕЙС</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Одношарові стакани ЩІЧКИ</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Брендування паперових стаканів</a>
+															</li>
+														</ul>
+													</div>
+													<div class="submenu-catalog-h__block">
+														<h4 class="submenu-catalog-h__title">Пластикові стакани</h4>
+														<ul class="submenu-catalog-h__list">
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Склоподібні стакани</a>
+															</li>
+														</ul>
+													</div>
+													<div class="submenu-catalog-h__block">
+														<h4 class="submenu-catalog-h__title">Купольні стакани</h4>
+														<ul class="submenu-catalog-h__list">
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Купольні стакани Бабл Ті</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Купольні стакани LF</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Купольні стакани COVERIS</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Брендування купольних стаканів</a>
+															</li>
+														</ul>
+													</div>
+													<div class="submenu-catalog-h__block">
+														<h4 class="submenu-catalog-h__title">Паперові стакани</h4>
+														<ul class="submenu-catalog-h__list">
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Гофровані стакани</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Двошарові стакани</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Крафтові стакани</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Бамбукові стакани</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Чорні одношарові стакани</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Білі одношарові стакани</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Одношарові стакани з малюнком</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Одношарові стакани ФЕЙС</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Одношарові стакани ЩІЧКИ</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Брендування паперових стаканів</a>
+															</li>
+														</ul>
+													</div>
+													<div class="submenu-catalog-h__block">
+														<h4 class="submenu-catalog-h__title">Пластикові стакани</h4>
+														<ul class="submenu-catalog-h__list">
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Склоподібні стакани</a>
+															</li>
+														</ul>
+													</div>
+													<div class="submenu-catalog-h__block">
+														<h4 class="submenu-catalog-h__title">Купольні стакани</h4>
+														<ul class="submenu-catalog-h__list">
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Купольні стакани Бабл Ті</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Купольні стакани LF</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Купольні стакани COVERIS</a>
+															</li>
+															<li class="submenu-catalog-h__item">
+																<a href="#" class="submenu-catalog-h__link">Брендування купольних стаканів</a>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<form data-da=".header__top .header__container, 767.98, 1" action="#" method="get" class="header__search input input--icon input--accent _icon-search">
+						<input required type="text" name="search" placeholder="Пошук товарів" class="input">
+					</form>
+					<div data-da=".mobile-menu, 767.98, 4" class="header__actions actions-header">
+						<a href="#" class="actions-header__item item-actions-h">
+							<div class="item-actions-h__icon _icon-heart">
+								<div class="marker">2</div>
+							</div>
+							<div class="item-actions-h__title-mobile">Обране</div>
+						</a>
+						<a href="#" class="actions-header__item item-actions-h">
+							<div class="item-actions-h__icon _icon-bell">
+								<div class="marker">2</div>
+							</div>
+							<div class="item-actions-h__title-mobile">Повідомлення</div>
+						</a>
+						<a href="#" class="actions-header__item item-actions-h">
+							<div class="item-actions-h__icon _icon-user-bold"></div>
+							<div class="item-actions-h__title-mobile">Смиричинський В.</div>
+							<div class="item-actions-h__details">
+								<div class="item-actions-h__label">Кабінет</div>
+								<div class="item-actions-h__label item-actions-h__label--accent">Смиричинський В.</div>
+							</div>
+						</a>
+						<a href="#" class="actions-header__item item-actions-h">
+							<div class="item-actions-h__icon _icon-cart-simple"></div>
+							<div class="item-actions-h__title-mobile">Кошик</div>
+							<div class="item-actions-h__details item-actions-h__details--mobile">
+								<div class="item-actions-h__label item-actions-h__label--accent">13 808 ₴</div>
+								<div class="item-actions-h__label">Від 1 000₴</div>
+							</div>
+						</a>
+					</div>
+
+				</div>
+			</div>
+			<div class="mobile-menu">
+				<a href="#" class="mobile-menu__catalog button _icon-catalog-menu">Каталог</a>
+				<a href="#" class="mobile-menu__border-link button button--border">Акційні товари</a>
+				<div class="mobile-menu__lang-mobile lang-mobile">
+					<a href="#" class="_active">UK</a>
+					<a href="#">EN</a>
+				</div>
+				<div data-spoilers data-spoilers-speed="300" class="mobile-menu__contacts contacts-header">
+					<details class="contacts-header__item">
+						<summary data-spoiler-close class="contacts-header__title">+38 (068) 888-70-91
+							<div class="contacts-header__worktime">
+								з 8:00 до 20:00 без вихідних
+							</div>
+						</summary>
+						<div class="contacts-header__body">
+							<div class="contacts-header__block">
+								<a href="tel:380688887091" class="contacts-header__link">+38 (068) 888-70-91</a>
+							</div>
+							<div class="contacts-header__block">
+								<a href="mailto:hello@lookfort.com" class="contacts-header__link">hello@lookfort.com</a>
+							</div>
+							<div class="contacts-header__block">
+								<div class="contacts-header__social social-component">
+									<a href="#" class="social-component__item _icon-inst"></a>
+									<a href="#" class="social-component__item _icon-vbr"></a>
+									<a href="#" class="social-component__item _icon-tg"></a>
+									<a href="#" class="social-component__item _icon-msg"></a>
+								</div>
+							</div>
+							<div class="contacts-header__block">
+								<form action="#" method="post" enctype="multipart/form-data" class="contacts-header__recall recall-header">
+									<div class="recall-header__label">Перетелефонувати вам?</div>
+									<div class="recall-header__input input">
+										<input name="phone" type="text" placeholder="Телефон">
+									</div>
+									<button type="button" class="recall-header__button button button--orange">Зателефонуйте</button>
+								</form>
+							</div>
+						</div>
+					</details>
+				</div>
+			</div>
+			<div class="mobile-navbar">
+				<a href="#" class="mobile-navbar__item _icon-catalog">Каталог</a>
+				<a href="#" class="mobile-navbar__item _icon-bag">Кошик</a>
+				<a href="#" class="mobile-navbar__item _icon-user">Профіль</a>
+				<div class="mobile-navbar__item">Меню</div>
+			</div>
+		</header>
+		<main class="page">
+			<div class="page__breadcrumbs breadcrumbs breadcrumbs--no-margin">
+				<div class="breadcrumbs__container">
+					<ul class="breadcrumbs__list">
+						<li>
+							<a href="#">Головна</a>
+						</li>
+						<li>
+							<a href="#">Одноразові стакани</a>
+						</li>
+						<li>
+							<a href="#">Паперові стакани</a>
+						</li>
+						<li>
+							<span>Гофрований стакан паперовий 110мл білий WAVE</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="page__product product">
+				<ul class="product__navigation navigation-product">
+					<li class="navigation-product__item">
+						<a href="#" class="navigation-product__link">Все про товар</a>
+					</li>
+					<li class="navigation-product__item">
+						<a href="#" class="navigation-product__link">Усі характеристики</a>
+					</li>
+					<li class="navigation-product__item">
+						<a href="#" class="navigation-product__link">Опис</a>
+					</li>
+				</ul>
+				<div class="product__header header-product">
+					<div class="header-product__body">
+						<h1 class="header-product__title">Гофрований стакан паперовий 110мл білий WAVE</h1>
+						<div class="header-product__info">
+							<div class="header-product__model">Модель:  00-00004519</div>
+							<div class="header-product__favorite _icon-heart">Додати в обране</div>
+						</div>
+					</div>
+					<div class="header-product__status">В наявності</div>
+				</div>
+				<div class="product__body">
+					<div class="product__block">
+						<div class="product__slider">
+							<div class="splide product__main-slider">
+								<div class="splide__track">
+									<ul class="splide__list">
+										<li class="splide__slide"><img class="ibg" src="img/products/01.webp" alt="Image"></li>
+										<li class="splide__slide"><img class="ibg" src="img/products/02.webp" alt="Image"></li>
+										<li class="splide__slide"><img class="ibg" src="img/products/03.webp" alt="Image"></li>
+										<li class="splide__slide"><img class="ibg" src="img/products/04.webp" alt="Image"></li>
+									</ul>
+								</div>
+							</div>
+							<div class="splide product__thumbnail-slider">
+								<div class="splide__track">
+									<ul class="splide__list">
+										<li class="splide__slide"><img class="ibg" src="img/products/01.webp" alt="Image"></li>
+										<li class="splide__slide"><img class="ibg" src="img/products/02.webp" alt="Image"></li>
+										<li class="splide__slide"><img class="ibg" src="img/products/03.webp" alt="Image"></li>
+										<li class="splide__slide"><img class="ibg" src="img/products/04.webp" alt="Image"></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<section class="page__faq faq-section">
+				<div class="faq-section__container">
+					<h2 class="faq-section__section-title">Faq</h2>
+					<div data-spoilers data-one-spoiler class="faq-section__spoilers">
+						<details class="faq-section__item">
+							<summary class="faq-section__title">Які переваги паперових стаканчиків? <span></span></summary>
+							<div class="faq-section__text text">
+								<p>
+									Екологічність: Вони більш екологічні порівняно з пластиковими стаканчиками, оскільки виготовлені з
+									відновлюваних ресурсів.
+									Зручність: Ідеально підходять для одноразового використання на різних заходах, в офісах, кафе та ресторанах.
+									Різноманітність дизайну: Можливість друку різних візерунків та логотипів.
+								</p>
+							</div>
+						</details>
+						<details class="faq-section__item">
+							<summary class="faq-section__title">Чи можна переробляти паперові стаканчики? <span></span></summary>
+							<div class="faq-section__text text">
+								<p>
+									Екологічність: Вони більш екологічні порівняно з пластиковими стаканчиками, оскільки виготовлені з
+									відновлюваних ресурсів.
+									Зручність: Ідеально підходять для одноразового використання на різних заходах, в офісах, кафе та ресторанах.
+									Різноманітність дизайну: Можливість друку різних візерунків та логотипів.
+								</p>
+								<p>
+									Екологічність: Вони більш екологічні порівняно з пластиковими стаканчиками, оскільки виготовлені з
+									відновлюваних ресурсів.
+									Зручність: Ідеально підходять для одноразового використання на різних заходах, в офісах, кафе та ресторанах.
+									Різноманітність дизайну: Можливість друку різних візерунків та логотипів.
+								</p>
+							</div>
+						</details>
+						<details class="faq-section__item">
+							<summary class="faq-section__title">Чи можна використовувати паперові стаканчики для холодних напоїв?
+								<span></span>
+							</summary>
+							<div class="faq-section__text text">
+								<p>
+									Екологічність: Вони більш екологічні порівняно з пластиковими стаканчиками, оскільки виготовлені з
+									відновлюваних ресурсів.
+									Зручність: Ідеально підходять для одноразового використання на різних заходах, в офісах, кафе та ресторанах.
+									Різноманітність дизайну: Можливість друку різних візерунків та логотипів.
+								</p>
+							</div>
+						</details>
+						<details class="faq-section__item">
+							<summary class="faq-section__title">Чи можна замовити паперові стаканчики з індивідуальним дизайном?
+								<span></span>
+							</summary>
+							<div class="faq-section__text text">
+								<p>
+									Екологічність: Вони більш екологічні порівняно з пластиковими стаканчиками, оскільки виготовлені з
+									відновлюваних ресурсів.
+									Зручність: Ідеально підходять для одноразового використання на різних заходах, в офісах, кафе та ресторанах.
+									Різноманітність дизайну: Можливість друку різних візерунків та логотипів.
+								</p>
+							</div>
+						</details>
+						<details class="faq-section__item">
+							<summary class="faq-section__title">Як замовити паперові стаканчики оптом? <span></span></summary>
+							<div class="faq-section__text text">
+								<p>
+									Екологічність: Вони більш екологічні порівняно з пластиковими стаканчиками, оскільки виготовлені з
+									відновлюваних ресурсів.
+									Зручність: Ідеально підходять для одноразового використання на різних заходах, в офісах, кафе та ресторанах.
+									Різноманітність дизайну: Можливість друку різних візерунків та логотипів.
+								</p>
+							</div>
+						</details>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__content">
+					<div class="footer__contacts contacts-footer">
+						<div class="contacts-footer__social social-component">
+							<a href="#" class="social-component__item _icon-inst"></a>
+							<a href="#" class="social-component__item _icon-vbr"></a>
+							<a href="#" class="social-component__item _icon-tg"></a>
+							<a href="#" class="social-component__item _icon-msg"></a>
+						</div>
+						<form action="#" method="post" enctype="multipart/form-data" class="footer__form form-footer">
+							<div class="form-footer__body">
+								<div class="form-footer__label _icon-mail">Підписуйтесь на розсилку та отримуйте спецпропозиції!</div>
+								<div class="form-footer__input input">
+									<input required type="email" name="email" placeholder="email@email.com">
+								</div>
+							</div>
+							<button class="form-footer__button button button--border">Підписатися на розсилку</button>
+						</form>
+					</div>
+					<div data-spoilers="767.98,max" class="footer__navigation navigation-footer">
+						<details class="navigation-footer__block">
+							<summary class="navigation-footer__title">Покупцям</summary>
+							<ul class="navigation-footer__list">
+								<li class="navigation-footer__item">
+									<a href="#" class="navigation-footer__link">Одноразові стакани</a>
+								</li>
+								<li class="navigation-footer__item">
+									<a href="#" class="navigation-footer__link">Тарілки одноразові</a>
+								</li>
+								<li class="navigation-footer__item">
+									<a href="#" class="navigation-footer__link">Одноразові прилади</a>
+								</li>
+								<li class="navigation-footer__item">
+									<a href="#" class="navigation-footer__link">Все для клінінгу та гігієни</a>
+								</li>
+								<li class="navigation-footer__item">
+									<a href="#" class="navigation-footer__link">Все для кав'ярні</a>
+								</li>
+								<li class="navigation-footer__item">
+									<a href="#" class="navigation-footer__link">Упаковка для їжі на винос</a>
+								</li>
+							</ul>
+						</details>
+						<details class="navigation-footer__block">
+							<summary class="navigation-footer__title">Споживачам</summary>
+							<ul class="navigation-footer__list">
+								<li class="navigation-footer__item">
+									<a href="#" class="navigation-footer__link">Брендування</a>
+								</li>
+								<li class="navigation-footer__item">
+									<a href="#" class="navigation-footer__link">Гарантії</a>
+								</li>
+								<li class="navigation-footer__item">
+									<a href="#" class="navigation-footer__link">Повернення та обмін</a>
+								</li>
+							</ul>
+						</details>
+						<details class="navigation-footer__block">
+							<summary class="navigation-footer__title">Допомога</summary>
+							<ul class="navigation-footer__list">
+								<li class="navigation-footer__item">
+									<a href="#" class="navigation-footer__link">Доставка та<br>оплата</a>
+								</li>
+								<li class="navigation-footer__item">
+									<a href="#" class="navigation-footer__link">Програма<br>лояльності</a>
+								</li>
+								<li class="navigation-footer__item">
+									<a href="#" class="navigation-footer__link">Повернення</a>
+								</li>
+							</ul>
+						</details>
+						<details class="navigation-footer__block">
+							<summary class="navigation-footer__title">Про компанію</summary>
+							<ul class="navigation-footer__list">
+								<li class="navigation-footer__item">
+									<a href="#" class="navigation-footer__link">Про нас</a>
+								</li>
+								<li class="navigation-footer__item">
+									<a href="#" class="navigation-footer__link">Контакти</a>
+								</li>
+							</ul>
+						</details>
+					</div>
+				</div>
+				<div class="footer__bottom bottom-footer">
+					<a href="#" class="bottom-footer__logo">
+						<img src="img/logo-white.svg" alt="Image" class="ibg ibg--contain">
+					</a>
+					<ul class="bottom-footer__list">
+						<li class="bottom-footer__item">
+							<a href="#" class="bottom-footer__link">LOOKFORT 2024</a>
+						</li>
+						<li class="bottom-footer__item">
+							<a href="#" class="bottom-footer__link">Privacy</a>
+						</li>
+						<li class="bottom-footer__item">
+							<a href="#" class="bottom-footer__link">Оферта</a>
+						</li>
+					</ul>
+					<a href="#" class="bottom-footer__design-by">
+						<img src="img/design-by.svg" alt="Logo" class="ibg ibg--contain">
+					</a>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script src="js/app.min.js?_v=20240917165455"></script>
+</body>
+
+</html>
