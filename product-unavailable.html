@@ -2,7 +2,7 @@
 <html lang="uk">
 
 <head>
-	<title>Товар</title>
+	<title>Товар не в наявності</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
@@ -1033,7 +1033,7 @@
 								<button type="button" class="header-product__favorite _icon-heart"><span>Додати в обране</span></button>
 							</div>
 						</div>
-						<div data-da=".header-product__body, 767.98, first" class="header-product__status">В наявності</div>
+						<div data-da=".header-product__body, 767.98, first" class="header-product__status header-product__status--red">Очікується</div>
 					</div>
 					<div class="product__body">
 						<div class="product__block">
@@ -1071,41 +1071,23 @@
 
 							</div>
 							<div class="product__actions actions-product">
-								<div class="actions-product__order order-product">
-									<div class="order-product__block">
-										<div class="order-product__label">Доступні об'єми</div>
-										<select name="form[]" data-class-modif="product">
-											<option value="1" selected>Об'єм 420мл</option>
-											<option value="2">Об'єм 520мл</option>
-											<option value="3">Об'єм 620мл</option>
-											<option value="4">Об'єм 720мл</option>
-										</select>
-									</div>
-									<div class="order-product__block">
-										<div class="order-product__label">Колір</div>
-										<select name="form[]" data-class-modif="product">
-											<option value="1" selected>Зелений</option>
-											<option value="2">Червоний</option>
-											<option value="3">Синій</option>
-											<option value="4">Рожевий</option>
-										</select>
-									</div>
+								<div class="actions-product__order order-product order-product--disabled">
 									<div class="order-product__switch switch-product">
 										<label class="switch-product__item">
-											<input checked type="radio" name="product">
+											<input disabled checked type="radio" name="product">
 											500 шт в коробці
 										</label>
 										<label class="switch-product__item">
-											<input type="radio" name="product">
+											<input disabled type="radio" name="product">
 											25 шт в коробці
 										</label>
 									</div>
 									<div class="order-product__count">
-										<div class="order-product__label">5.49₴ / 1шт</div>
+										<div class="order-product__label order-product__label--disabled">5.49₴ / 1шт</div>
 										<div data-min="1" data-max="999" class="counter">
-											<button class="counter__btn counter__btn--decrement" type="button"></button>
-											<input type="number" value="500">
-											<button class="counter__btn counter__btn--increment" type="button"></button>
+											<button disabled class="counter__btn counter__btn--decrement" type="button"></button>
+											<input disabled type="number" value="500">
+											<button disabled class="counter__btn counter__btn--increment" type="button"></button>
 										</div>
 									</div>
 									<div class="order-product__summary summary-order-p">
@@ -1113,7 +1095,8 @@
 											<div class="summary-order-p__label">Загальна сума:</div>
 											<div class="summary-order-p__label summary-order-p__label--bold">3 335₴</div>
 										</div>
-										<button class="summary-order-p__button button">В кошик</button>
+										<button data-popup="#product-popup-sent" class="summary-order-p__button button">Зробити
+											замовлення</button>
 									</div>
 								</div>
 								<div class="actions-product__specs-preview specs-preview">
@@ -1166,16 +1149,1007 @@
 											</div>
 										</div>
 									</div>
-									<div class="specs-preview__banner banner-branding">
-										<img src="img/product-page/banner-branding-bg.webp" alt="Image" class="banner-branding__bg">
-										<div class="banner-branding__logo">
-											<img src="img/logo.svg" alt="Logo" class="ibg ibg--contain">
+								</div>
+								<div class="actions-product__help-banner help-banner">
+									<div class="help-banner__decor help-banner__decor--left">
+										<svg xmlns="http://www.w3.org/2000/svg" width="467" height="293" viewBox="0 0 467 293" fill="none">
+											<path d="M455.387 404.774C449.107 405.058 419.91 415.375 389.917 427.976C359.925 440.578 328.525 451.894 320.023 452.728L304.365 454.337L300.545 369.957C296.766 286.476 296.705 285.129 285.554 277.089C262.762 260.131 238.357 267.083 142.688 318.187C108.882 335.909 79.8272 349.367 78.4206 348.082C77.0141 346.796 95.6774 292.431 120.173 227.908C144.649 162.936 165.821 104.41 167.29 97.1481C172.023 72.6475 151.659 49.7329 126.541 50.8701C109.048 51.6621 77.9535 69.7104 -32.4792 142.172C-94.0165 182.736 -152.556 220.017 -162.71 224.075C-199.248 241.02 -196.024 222.884 -140.042 109.263C-70.9249 -31.9382 -55.3215 -74.4709 -75.3229 -69.5177C-84.661 -67.296 -97.6514 -46.4693 -148.228 47.5685C-221.238 182.2 -236.414 234.158 -210.934 260.888C-191.588 281.15 -155.479 264.674 -20.6185 175.815C116.403 85.06 127.821 79.1461 128.532 94.855C128.736 99.3433 112.785 144.14 93.0419 194.506C37.4831 337.342 29.8331 366.922 44.5912 385.143C56.0267 399.467 78.2302 393.515 147.576 356.644C232.315 312.331 253.928 303.257 260.023 308.828C263.305 311.827 264.219 332.024 262.48 373.03C258.816 470.791 268.415 494.193 311.923 492.223C341.078 490.903 363.119 481.36 419.518 446.425C465.864 417.792 477.365 403.779 455.387 404.774Z" fill="#3CA79A" />
+										</svg>
+									</div>
+									<div class="help-banner__decor help-banner__decor--right">
+										<svg xmlns="http://www.w3.org/2000/svg" width="345" height="291" viewBox="0 0 345 291" fill="none">
+											<path d="M696.123 183.024C689.937 184.141 662.372 198.251 634.323 214.731C606.274 231.211 576.659 246.604 568.344 248.563L553.039 252.24L538.026 169.12C523.172 86.8832 522.932 85.5568 510.811 79.0717C485.966 65.297 462.702 75.4341 374.684 138.814C343.536 160.876 316.531 178.08 314.965 176.993C313.4 175.906 324.664 119.542 340.357 52.3332C355.97 -15.3177 369.166 -76.1403 369.656 -83.5336C371.088 -108.446 347.856 -128.447 323.112 -123.978C305.88 -120.866 277.463 -98.8406 177.654 -12.3297C122.061 36.0621 69.0024 80.8004 59.4787 86.173C25.5203 107.829 26.3027 89.4259 66.6694 -30.6342C116.384 -179.776 126.189 -224.007 107.025 -216.436C98.0652 -212.992 87.9614 -190.622 50.3468 -90.6907C-4.10031 52.4577 -12.2286 105.973 16.5824 129.076C38.4516 146.584 72.048 125.449 193.886 19.4367C317.613 -88.7434 328.143 -96.1239 330.938 -80.6493C331.737 -76.228 321.889 -29.7069 309.023 22.8381C272.963 171.796 269.317 202.131 286.368 218.227C299.608 230.902 320.822 222.048 384.645 176.278C462.735 121.084 482.948 109.215 489.73 113.925C493.382 116.461 496.976 136.357 500.708 177.23C510.084 274.609 522.711 296.525 565.571 288.784C594.291 283.596 614.866 271.206 666.115 229.077C708.24 194.532 717.774 179.113 696.123 183.024Z" fill="#3CA79A" />
+										</svg>
+									</div>
+									<div class="help-banner__avatar">
+										<img src="img/products/avatar.webp" alt="Avatar" class="ibg ibg--top-center">
+									</div>
+									<div class="help-banner__body">
+										<h3 class="help-banner__title">Вам потрібна наша допомога?<br><span class="help-banner__tablet-text">Наш
+												менеджер Ірина,
+												прокомунікує з
+												вами.</span></h3>
+										<div class="help-banner__text text">
+											<p>
+												Напишіть нам і наш консультант зв'яжеться з вами та допоможе з вибором товару.
+											</p>
 										</div>
-										<a href="#" class="banner-branding__link _icon-chevron-down">Замовити брендування</a>
+										<a href="#" class="help-banner__link button button--white">Консультація</a>
 									</div>
 								</div>
 							</div>
 						</div>
+						<section class="product__products-section products-section">
+							<h2 class="products-section__title section-title">
+								Схожі товари
+							</h2>
+							<div data-tabs class="product-tabs">
+								<div class="product-tabs__header">
+									<nav data-tabs-titles data-tabs-titles class="product-tabs__navigation">
+										<button type="button" class="product-tabs__title _tab-active">Стаканчити</button>
+										<button type="button" class="product-tabs__title">Серветки</button>
+										<button type="button" class="product-tabs__title">Сиропи</button>
+										<button type="button" class="product-tabs__title">Холдери</button>
+										<button type="button" class="product-tabs__title">Цукор</button>
+										<button type="button" class="product-tabs__title">Мішалки</button>
+									</nav>
+								</div>
+								<div data-tabs-body class="product-tabs__content">
+									<div class="product-tabs__body">
+										<div class="product-tabs__slider splide splide--product splide--arrows">
+											<div class="splide__track">
+												<ul class="splide__list">
+													<li class="splide__slide">
+														<article class="item-product">
+															<div href="#" class="item-product__image">
+																<a href="#" class="item-product__image-link"><img class="ibg" src="img/products/01.webp" alt="Product" class="ibg"></a>
+																<div class="item-product__label">-20%</div>
+																<button class="item-product__wishlist _icon-heart"></button>
+															</div>
+															<h3 class="item-product__title">
+																<a href="#" class="item-product__link">Супник 480мл PP чорний з герметичною кришкою LF</a>
+															</h3>
+															<div class="item-product__switch switch-product">
+																<label class="switch-product__item">
+																	<input checked type="radio" name="product">
+																	500 шт в коробці
+																</label>
+																<label class="switch-product__item">
+																	<input type="radio" name="product">
+																	25 шт в коробці
+																</label>
+															</div>
+															<div class="item-product__body">
+																<div class="item-product__price">
+																	2.68₴ / 1шт
+																	<span class="item-product__discount">5.49₴ / 1шт</span>
+																</div>
+																<div data-min="1" data-max="999" class="counter">
+																	<button class="counter__btn counter__btn--decrement" type="button"></button>
+																	<input type="number" value="500">
+																	<button class="counter__btn counter__btn--increment" type="button"></button>
+																</div>
+															</div>
+															<div class="item-product__footer">
+																<div class="item-product__summary">35 000₴</div>
+																<button type="button" class="item-product__button button">В кошик</button>
+															</div>
+														</article>
+													</li>
+													<li class="splide__slide">
+														<article class="item-product">
+															<div href="#" class="item-product__image">
+																<a href="#" class="item-product__image-link"><img class="ibg" src="img/products/01.webp" alt="Product" class="ibg"></a>
+																<div class="item-product__label">-20%</div>
+																<button class="item-product__wishlist _icon-heart"></button>
+															</div>
+															<h3 class="item-product__title">
+																<a href="#" class="item-product__link">Супник 480мл PP чорний з герметичною кришкою LF</a>
+															</h3>
+															<div class="item-product__switch switch-product">
+																<label class="switch-product__item">
+																	<input checked type="radio" name="product">
+																	500 шт в коробці
+																</label>
+																<label class="switch-product__item">
+																	<input type="radio" name="product">
+																	25 шт в коробці
+																</label>
+															</div>
+															<div class="item-product__body">
+																<div class="item-product__price">
+																	2.68₴ / 1шт
+																	<span class="item-product__discount">5.49₴ / 1шт</span>
+																</div>
+																<div data-min="1" data-max="999" class="counter">
+																	<button class="counter__btn counter__btn--decrement" type="button"></button>
+																	<input type="number" value="500">
+																	<button class="counter__btn counter__btn--increment" type="button"></button>
+																</div>
+															</div>
+															<div class="item-product__footer">
+																<div class="item-product__summary">35 000₴</div>
+																<button type="button" class="item-product__button button">В кошик</button>
+															</div>
+														</article>
+													</li>
+													<li class="splide__slide">
+														<article class="item-product">
+															<div href="#" class="item-product__image">
+																<a href="#" class="item-product__image-link"><img class="ibg" src="img/products/01.webp" alt="Product" class="ibg"></a>
+																<div class="item-product__label">-20%</div>
+																<button class="item-product__wishlist _icon-heart"></button>
+															</div>
+															<h3 class="item-product__title">
+																<a href="#" class="item-product__link">Супник 480мл PP чорний з герметичною кришкою LF</a>
+															</h3>
+															<div class="item-product__switch switch-product">
+																<label class="switch-product__item">
+																	<input checked type="radio" name="product">
+																	500 шт в коробці
+																</label>
+																<label class="switch-product__item">
+																	<input type="radio" name="product">
+																	25 шт в коробці
+																</label>
+															</div>
+															<div class="item-product__body">
+																<div class="item-product__price">
+																	2.68₴ / 1шт
+																	<span class="item-product__discount">5.49₴ / 1шт</span>
+																</div>
+																<div data-min="1" data-max="999" class="counter">
+																	<button class="counter__btn counter__btn--decrement" type="button"></button>
+																	<input type="number" value="500">
+																	<button class="counter__btn counter__btn--increment" type="button"></button>
+																</div>
+															</div>
+															<div class="item-product__footer">
+																<div class="item-product__summary">35 000₴</div>
+																<button type="button" class="item-product__button button">В кошик</button>
+															</div>
+														</article>
+													</li>
+													<li class="splide__slide">
+														<article class="item-product">
+															<div href="#" class="item-product__image">
+																<a href="#" class="item-product__image-link"><img class="ibg" src="img/products/01.webp" alt="Product" class="ibg"></a>
+																<div class="item-product__label">-20%</div>
+																<button class="item-product__wishlist _icon-heart"></button>
+															</div>
+															<h3 class="item-product__title">
+																<a href="#" class="item-product__link">Супник 480мл PP чорний з герметичною кришкою LF</a>
+															</h3>
+															<div class="item-product__switch switch-product">
+																<label class="switch-product__item">
+																	<input checked type="radio" name="product">
+																	500 шт в коробці
+																</label>
+																<label class="switch-product__item">
+																	<input type="radio" name="product">
+																	25 шт в коробці
+																</label>
+															</div>
+															<div class="item-product__body">
+																<div class="item-product__price">
+																	2.68₴ / 1шт
+																	<span class="item-product__discount">5.49₴ / 1шт</span>
+																</div>
+																<div data-min="1" data-max="999" class="counter">
+																	<button class="counter__btn counter__btn--decrement" type="button"></button>
+																	<input type="number" value="500">
+																	<button class="counter__btn counter__btn--increment" type="button"></button>
+																</div>
+															</div>
+															<div class="item-product__footer">
+																<div class="item-product__summary">35 000₴</div>
+																<button type="button" class="item-product__button button">В кошик</button>
+															</div>
+														</article>
+													</li>
+												</ul>
+											</div>
+											<div class="splide__pagination"></div>
+										</div>
+									</div>
+									<div class="product-tabs__body">
+										<div class="product-tabs__slider splide splide--product splide--arrows">
+											<div class="splide__track">
+												<ul class="splide__list">
+													<li class="splide__slide">
+														<article class="item-product">
+															<div href="#" class="item-product__image">
+																<a href="#" class="item-product__image-link"><img class="ibg" src="img/products/01.webp" alt="Product" class="ibg"></a>
+																<div class="item-product__label">-20%</div>
+																<button class="item-product__wishlist _icon-heart"></button>
+															</div>
+															<h3 class="item-product__title">
+																<a href="#" class="item-product__link">Супник 480мл PP чорний з герметичною кришкою LF</a>
+															</h3>
+															<div class="item-product__switch switch-product">
+																<label class="switch-product__item">
+																	<input checked type="radio" name="product">
+																	500 шт в коробці
+																</label>
+																<label class="switch-product__item">
+																	<input type="radio" name="product">
+																	25 шт в коробці
+																</label>
+															</div>
+															<div class="item-product__body">
+																<div class="item-product__price">
+																	2.68₴ / 1шт
+																	<span class="item-product__discount">5.49₴ / 1шт</span>
+																</div>
+																<div data-min="1" data-max="999" class="counter">
+																	<button class="counter__btn counter__btn--decrement" type="button"></button>
+																	<input type="number" value="500">
+																	<button class="counter__btn counter__btn--increment" type="button"></button>
+																</div>
+															</div>
+															<div class="item-product__footer">
+																<div class="item-product__summary">35 000₴</div>
+																<button type="button" class="item-product__button button">В кошик</button>
+															</div>
+														</article>
+													</li>
+													<li class="splide__slide">
+														<article class="item-product">
+															<div href="#" class="item-product__image">
+																<a href="#" class="item-product__image-link"><img class="ibg" src="img/products/01.webp" alt="Product" class="ibg"></a>
+																<div class="item-product__label">-20%</div>
+																<button class="item-product__wishlist _icon-heart"></button>
+															</div>
+															<h3 class="item-product__title">
+																<a href="#" class="item-product__link">Супник 480мл PP чорний з герметичною кришкою LF</a>
+															</h3>
+															<div class="item-product__switch switch-product">
+																<label class="switch-product__item">
+																	<input checked type="radio" name="product">
+																	500 шт в коробці
+																</label>
+																<label class="switch-product__item">
+																	<input type="radio" name="product">
+																	25 шт в коробці
+																</label>
+															</div>
+															<div class="item-product__body">
+																<div class="item-product__price">
+																	2.68₴ / 1шт
+																	<span class="item-product__discount">5.49₴ / 1шт</span>
+																</div>
+																<div data-min="1" data-max="999" class="counter">
+																	<button class="counter__btn counter__btn--decrement" type="button"></button>
+																	<input type="number" value="500">
+																	<button class="counter__btn counter__btn--increment" type="button"></button>
+																</div>
+															</div>
+															<div class="item-product__footer">
+																<div class="item-product__summary">35 000₴</div>
+																<button type="button" class="item-product__button button">В кошик</button>
+															</div>
+														</article>
+													</li>
+													<li class="splide__slide">
+														<article class="item-product">
+															<div href="#" class="item-product__image">
+																<a href="#" class="item-product__image-link"><img class="ibg" src="img/products/01.webp" alt="Product" class="ibg"></a>
+																<div class="item-product__label">-20%</div>
+																<button class="item-product__wishlist _icon-heart"></button>
+															</div>
+															<h3 class="item-product__title">
+																<a href="#" class="item-product__link">Супник 480мл PP чорний з герметичною кришкою LF</a>
+															</h3>
+															<div class="item-product__switch switch-product">
+																<label class="switch-product__item">
+																	<input checked type="radio" name="product">
+																	500 шт в коробці
+																</label>
+																<label class="switch-product__item">
+																	<input type="radio" name="product">
+																	25 шт в коробці
+																</label>
+															</div>
+															<div class="item-product__body">
+																<div class="item-product__price">
+																	2.68₴ / 1шт
+																	<span class="item-product__discount">5.49₴ / 1шт</span>
+																</div>
+																<div data-min="1" data-max="999" class="counter">
+																	<button class="counter__btn counter__btn--decrement" type="button"></button>
+																	<input type="number" value="500">
+																	<button class="counter__btn counter__btn--increment" type="button"></button>
+																</div>
+															</div>
+															<div class="item-product__footer">
+																<div class="item-product__summary">35 000₴</div>
+																<button type="button" class="item-product__button button">В кошик</button>
+															</div>
+														</article>
+													</li>
+													<li class="splide__slide">
+														<article class="item-product">
+															<div href="#" class="item-product__image">
+																<a href="#" class="item-product__image-link"><img class="ibg" src="img/products/01.webp" alt="Product" class="ibg"></a>
+																<div class="item-product__label">-20%</div>
+																<button class="item-product__wishlist _icon-heart"></button>
+															</div>
+															<h3 class="item-product__title">
+																<a href="#" class="item-product__link">Супник 480мл PP чорний з герметичною кришкою LF</a>
+															</h3>
+															<div class="item-product__switch switch-product">
+																<label class="switch-product__item">
+																	<input checked type="radio" name="product">
+																	500 шт в коробці
+																</label>
+																<label class="switch-product__item">
+																	<input type="radio" name="product">
+																	25 шт в коробці
+																</label>
+															</div>
+															<div class="item-product__body">
+																<div class="item-product__price">
+																	2.68₴ / 1шт
+																	<span class="item-product__discount">5.49₴ / 1шт</span>
+																</div>
+																<div data-min="1" data-max="999" class="counter">
+																	<button class="counter__btn counter__btn--decrement" type="button"></button>
+																	<input type="number" value="500">
+																	<button class="counter__btn counter__btn--increment" type="button"></button>
+																</div>
+															</div>
+															<div class="item-product__footer">
+																<div class="item-product__summary">35 000₴</div>
+																<button type="button" class="item-product__button button">В кошик</button>
+															</div>
+														</article>
+													</li>
+												</ul>
+											</div>
+											<div class="pagination">
+												<div class="splide__pagination"></div>
+											</div>
+										</div>
+									</div>
+									<div class="product-tabs__body">
+										<div class="product-tabs__slider splide splide--product splide--arrows">
+											<div class="splide__track">
+												<ul class="splide__list">
+													<li class="splide__slide">
+														<article class="item-product">
+															<div href="#" class="item-product__image">
+																<a href="#" class="item-product__image-link"><img class="ibg" src="img/products/01.webp" alt="Product" class="ibg"></a>
+																<div class="item-product__label">-20%</div>
+																<button class="item-product__wishlist _icon-heart"></button>
+															</div>
+															<h3 class="item-product__title">
+																<a href="#" class="item-product__link">Супник 480мл PP чорний з герметичною кришкою LF</a>
+															</h3>
+															<div class="item-product__switch switch-product">
+																<label class="switch-product__item">
+																	<input checked type="radio" name="product">
+																	500 шт в коробці
+																</label>
+																<label class="switch-product__item">
+																	<input type="radio" name="product">
+																	25 шт в коробці
+																</label>
+															</div>
+															<div class="item-product__body">
+																<div class="item-product__price">
+																	2.68₴ / 1шт
+																	<span class="item-product__discount">5.49₴ / 1шт</span>
+																</div>
+																<div data-min="1" data-max="999" class="counter">
+																	<button class="counter__btn counter__btn--decrement" type="button"></button>
+																	<input type="number" value="500">
+																	<button class="counter__btn counter__btn--increment" type="button"></button>
+																</div>
+															</div>
+															<div class="item-product__footer">
+																<div class="item-product__summary">35 000₴</div>
+																<button type="button" class="item-product__button button">В кошик</button>
+															</div>
+														</article>
+													</li>
+													<li class="splide__slide">
+														<article class="item-product">
+															<div href="#" class="item-product__image">
+																<a href="#" class="item-product__image-link"><img class="ibg" src="img/products/01.webp" alt="Product" class="ibg"></a>
+																<div class="item-product__label">-20%</div>
+																<button class="item-product__wishlist _icon-heart"></button>
+															</div>
+															<h3 class="item-product__title">
+																<a href="#" class="item-product__link">Супник 480мл PP чорний з герметичною кришкою LF</a>
+															</h3>
+															<div class="item-product__switch switch-product">
+																<label class="switch-product__item">
+																	<input checked type="radio" name="product">
+																	500 шт в коробці
+																</label>
+																<label class="switch-product__item">
+																	<input type="radio" name="product">
+																	25 шт в коробці
+																</label>
+															</div>
+															<div class="item-product__body">
+																<div class="item-product__price">
+																	2.68₴ / 1шт
+																	<span class="item-product__discount">5.49₴ / 1шт</span>
+																</div>
+																<div data-min="1" data-max="999" class="counter">
+																	<button class="counter__btn counter__btn--decrement" type="button"></button>
+																	<input type="number" value="500">
+																	<button class="counter__btn counter__btn--increment" type="button"></button>
+																</div>
+															</div>
+															<div class="item-product__footer">
+																<div class="item-product__summary">35 000₴</div>
+																<button type="button" class="item-product__button button">В кошик</button>
+															</div>
+														</article>
+													</li>
+													<li class="splide__slide">
+														<article class="item-product">
+															<div href="#" class="item-product__image">
+																<a href="#" class="item-product__image-link"><img class="ibg" src="img/products/01.webp" alt="Product" class="ibg"></a>
+																<div class="item-product__label">-20%</div>
+																<button class="item-product__wishlist _icon-heart"></button>
+															</div>
+															<h3 class="item-product__title">
+																<a href="#" class="item-product__link">Супник 480мл PP чорний з герметичною кришкою LF</a>
+															</h3>
+															<div class="item-product__switch switch-product">
+																<label class="switch-product__item">
+																	<input checked type="radio" name="product">
+																	500 шт в коробці
+																</label>
+																<label class="switch-product__item">
+																	<input type="radio" name="product">
+																	25 шт в коробці
+																</label>
+															</div>
+															<div class="item-product__body">
+																<div class="item-product__price">
+																	2.68₴ / 1шт
+																	<span class="item-product__discount">5.49₴ / 1шт</span>
+																</div>
+																<div data-min="1" data-max="999" class="counter">
+																	<button class="counter__btn counter__btn--decrement" type="button"></button>
+																	<input type="number" value="500">
+																	<button class="counter__btn counter__btn--increment" type="button"></button>
+																</div>
+															</div>
+															<div class="item-product__footer">
+																<div class="item-product__summary">35 000₴</div>
+																<button type="button" class="item-product__button button">В кошик</button>
+															</div>
+														</article>
+													</li>
+													<li class="splide__slide">
+														<article class="item-product">
+															<div href="#" class="item-product__image">
+																<a href="#" class="item-product__image-link"><img class="ibg" src="img/products/01.webp" alt="Product" class="ibg"></a>
+																<div class="item-product__label">-20%</div>
+																<button class="item-product__wishlist _icon-heart"></button>
+															</div>
+															<h3 class="item-product__title">
+																<a href="#" class="item-product__link">Супник 480мл PP чорний з герметичною кришкою LF</a>
+															</h3>
+															<div class="item-product__switch switch-product">
+																<label class="switch-product__item">
+																	<input checked type="radio" name="product">
+																	500 шт в коробці
+																</label>
+																<label class="switch-product__item">
+																	<input type="radio" name="product">
+																	25 шт в коробці
+																</label>
+															</div>
+															<div class="item-product__body">
+																<div class="item-product__price">
+																	2.68₴ / 1шт
+																	<span class="item-product__discount">5.49₴ / 1шт</span>
+																</div>
+																<div data-min="1" data-max="999" class="counter">
+																	<button class="counter__btn counter__btn--decrement" type="button"></button>
+																	<input type="number" value="500">
+																	<button class="counter__btn counter__btn--increment" type="button"></button>
+																</div>
+															</div>
+															<div class="item-product__footer">
+																<div class="item-product__summary">35 000₴</div>
+																<button type="button" class="item-product__button button">В кошик</button>
+															</div>
+														</article>
+													</li>
+												</ul>
+											</div>
+											<div class="pagination">
+												<div class="splide__pagination"></div>
+											</div>
+										</div>
+									</div>
+									<div class="product-tabs__body">
+										<div class="product-tabs__slider splide splide--product splide--arrows">
+											<div class="splide__track">
+												<ul class="splide__list">
+													<li class="splide__slide">
+														<article class="item-product">
+															<div href="#" class="item-product__image">
+																<a href="#" class="item-product__image-link"><img class="ibg" src="img/products/01.webp" alt="Product" class="ibg"></a>
+																<div class="item-product__label">-20%</div>
+																<button class="item-product__wishlist _icon-heart"></button>
+															</div>
+															<h3 class="item-product__title">
+																<a href="#" class="item-product__link">Супник 480мл PP чорний з герметичною кришкою LF</a>
+															</h3>
+															<div class="item-product__switch switch-product">
+																<label class="switch-product__item">
+																	<input checked type="radio" name="product">
+																	500 шт в коробці
+																</label>
+																<label class="switch-product__item">
+																	<input type="radio" name="product">
+																	25 шт в коробці
+																</label>
+															</div>
+															<div class="item-product__body">
+																<div class="item-product__price">
+																	2.68₴ / 1шт
+																	<span class="item-product__discount">5.49₴ / 1шт</span>
+																</div>
+																<div data-min="1" data-max="999" class="counter">
+																	<button class="counter__btn counter__btn--decrement" type="button"></button>
+																	<input type="number" value="500">
+																	<button class="counter__btn counter__btn--increment" type="button"></button>
+																</div>
+															</div>
+															<div class="item-product__footer">
+																<div class="item-product__summary">35 000₴</div>
+																<button type="button" class="item-product__button button">В кошик</button>
+															</div>
+														</article>
+													</li>
+													<li class="splide__slide">
+														<article class="item-product">
+															<div href="#" class="item-product__image">
+																<a href="#" class="item-product__image-link"><img class="ibg" src="img/products/01.webp" alt="Product" class="ibg"></a>
+																<div class="item-product__label">-20%</div>
+																<button class="item-product__wishlist _icon-heart"></button>
+															</div>
+															<h3 class="item-product__title">
+																<a href="#" class="item-product__link">Супник 480мл PP чорний з герметичною кришкою LF</a>
+															</h3>
+															<div class="item-product__switch switch-product">
+																<label class="switch-product__item">
+																	<input checked type="radio" name="product">
+																	500 шт в коробці
+																</label>
+																<label class="switch-product__item">
+																	<input type="radio" name="product">
+																	25 шт в коробці
+																</label>
+															</div>
+															<div class="item-product__body">
+																<div class="item-product__price">
+																	2.68₴ / 1шт
+																	<span class="item-product__discount">5.49₴ / 1шт</span>
+																</div>
+																<div data-min="1" data-max="999" class="counter">
+																	<button class="counter__btn counter__btn--decrement" type="button"></button>
+																	<input type="number" value="500">
+																	<button class="counter__btn counter__btn--increment" type="button"></button>
+																</div>
+															</div>
+															<div class="item-product__footer">
+																<div class="item-product__summary">35 000₴</div>
+																<button type="button" class="item-product__button button">В кошик</button>
+															</div>
+														</article>
+													</li>
+													<li class="splide__slide">
+														<article class="item-product">
+															<div href="#" class="item-product__image">
+																<a href="#" class="item-product__image-link"><img class="ibg" src="img/products/01.webp" alt="Product" class="ibg"></a>
+																<div class="item-product__label">-20%</div>
+																<button class="item-product__wishlist _icon-heart"></button>
+															</div>
+															<h3 class="item-product__title">
+																<a href="#" class="item-product__link">Супник 480мл PP чорний з герметичною кришкою LF</a>
+															</h3>
+															<div class="item-product__switch switch-product">
+																<label class="switch-product__item">
+																	<input checked type="radio" name="product">
+																	500 шт в коробці
+																</label>
+																<label class="switch-product__item">
+																	<input type="radio" name="product">
+																	25 шт в коробці
+																</label>
+															</div>
+															<div class="item-product__body">
+																<div class="item-product__price">
+																	2.68₴ / 1шт
+																	<span class="item-product__discount">5.49₴ / 1шт</span>
+																</div>
+																<div data-min="1" data-max="999" class="counter">
+																	<button class="counter__btn counter__btn--decrement" type="button"></button>
+																	<input type="number" value="500">
+																	<button class="counter__btn counter__btn--increment" type="button"></button>
+																</div>
+															</div>
+															<div class="item-product__footer">
+																<div class="item-product__summary">35 000₴</div>
+																<button type="button" class="item-product__button button">В кошик</button>
+															</div>
+														</article>
+													</li>
+													<li class="splide__slide">
+														<article class="item-product">
+															<div href="#" class="item-product__image">
+																<a href="#" class="item-product__image-link"><img class="ibg" src="img/products/01.webp" alt="Product" class="ibg"></a>
+																<div class="item-product__label">-20%</div>
+																<button class="item-product__wishlist _icon-heart"></button>
+															</div>
+															<h3 class="item-product__title">
+																<a href="#" class="item-product__link">Супник 480мл PP чорний з герметичною кришкою LF</a>
+															</h3>
+															<div class="item-product__switch switch-product">
+																<label class="switch-product__item">
+																	<input checked type="radio" name="product">
+																	500 шт в коробці
+																</label>
+																<label class="switch-product__item">
+																	<input type="radio" name="product">
+																	25 шт в коробці
+																</label>
+															</div>
+															<div class="item-product__body">
+																<div class="item-product__price">
+																	2.68₴ / 1шт
+																	<span class="item-product__discount">5.49₴ / 1шт</span>
+																</div>
+																<div data-min="1" data-max="999" class="counter">
+																	<button class="counter__btn counter__btn--decrement" type="button"></button>
+																	<input type="number" value="500">
+																	<button class="counter__btn counter__btn--increment" type="button"></button>
+																</div>
+															</div>
+															<div class="item-product__footer">
+																<div class="item-product__summary">35 000₴</div>
+																<button type="button" class="item-product__button button">В кошик</button>
+															</div>
+														</article>
+													</li>
+												</ul>
+											</div>
+											<div class="pagination">
+												<div class="splide__pagination"></div>
+											</div>
+										</div>
+									</div>
+									<div class="product-tabs__body">
+										<div class="product-tabs__slider splide splide--product splide--arrows">
+											<div class="splide__track">
+												<ul class="splide__list">
+													<li class="splide__slide">
+														<article class="item-product">
+															<div href="#" class="item-product__image">
+																<a href="#" class="item-product__image-link"><img class="ibg" src="img/products/01.webp" alt="Product" class="ibg"></a>
+																<div class="item-product__label">-20%</div>
+																<button class="item-product__wishlist _icon-heart"></button>
+															</div>
+															<h3 class="item-product__title">
+																<a href="#" class="item-product__link">Супник 480мл PP чорний з герметичною кришкою LF</a>
+															</h3>
+															<div class="item-product__switch switch-product">
+																<label class="switch-product__item">
+																	<input checked type="radio" name="product">
+																	500 шт в коробці
+																</label>
+																<label class="switch-product__item">
+																	<input type="radio" name="product">
+																	25 шт в коробці
+																</label>
+															</div>
+															<div class="item-product__body">
+																<div class="item-product__price">
+																	2.68₴ / 1шт
+																	<span class="item-product__discount">5.49₴ / 1шт</span>
+																</div>
+																<div data-min="1" data-max="999" class="counter">
+																	<button class="counter__btn counter__btn--decrement" type="button"></button>
+																	<input type="number" value="500">
+																	<button class="counter__btn counter__btn--increment" type="button"></button>
+																</div>
+															</div>
+															<div class="item-product__footer">
+																<div class="item-product__summary">35 000₴</div>
+																<button type="button" class="item-product__button button">В кошик</button>
+															</div>
+														</article>
+													</li>
+													<li class="splide__slide">
+														<article class="item-product">
+															<div href="#" class="item-product__image">
+																<a href="#" class="item-product__image-link"><img class="ibg" src="img/products/01.webp" alt="Product" class="ibg"></a>
+																<div class="item-product__label">-20%</div>
+																<button class="item-product__wishlist _icon-heart"></button>
+															</div>
+															<h3 class="item-product__title">
+																<a href="#" class="item-product__link">Супник 480мл PP чорний з герметичною кришкою LF</a>
+															</h3>
+															<div class="item-product__switch switch-product">
+																<label class="switch-product__item">
+																	<input checked type="radio" name="product">
+																	500 шт в коробці
+																</label>
+																<label class="switch-product__item">
+																	<input type="radio" name="product">
+																	25 шт в коробці
+																</label>
+															</div>
+															<div class="item-product__body">
+																<div class="item-product__price">
+																	2.68₴ / 1шт
+																	<span class="item-product__discount">5.49₴ / 1шт</span>
+																</div>
+																<div data-min="1" data-max="999" class="counter">
+																	<button class="counter__btn counter__btn--decrement" type="button"></button>
+																	<input type="number" value="500">
+																	<button class="counter__btn counter__btn--increment" type="button"></button>
+																</div>
+															</div>
+															<div class="item-product__footer">
+																<div class="item-product__summary">35 000₴</div>
+																<button type="button" class="item-product__button button">В кошик</button>
+															</div>
+														</article>
+													</li>
+													<li class="splide__slide">
+														<article class="item-product">
+															<div href="#" class="item-product__image">
+																<a href="#" class="item-product__image-link"><img class="ibg" src="img/products/01.webp" alt="Product" class="ibg"></a>
+																<div class="item-product__label">-20%</div>
+																<button class="item-product__wishlist _icon-heart"></button>
+															</div>
+															<h3 class="item-product__title">
+																<a href="#" class="item-product__link">Супник 480мл PP чорний з герметичною кришкою LF</a>
+															</h3>
+															<div class="item-product__switch switch-product">
+																<label class="switch-product__item">
+																	<input checked type="radio" name="product">
+																	500 шт в коробці
+																</label>
+																<label class="switch-product__item">
+																	<input type="radio" name="product">
+																	25 шт в коробці
+																</label>
+															</div>
+															<div class="item-product__body">
+																<div class="item-product__price">
+																	2.68₴ / 1шт
+																	<span class="item-product__discount">5.49₴ / 1шт</span>
+																</div>
+																<div data-min="1" data-max="999" class="counter">
+																	<button class="counter__btn counter__btn--decrement" type="button"></button>
+																	<input type="number" value="500">
+																	<button class="counter__btn counter__btn--increment" type="button"></button>
+																</div>
+															</div>
+															<div class="item-product__footer">
+																<div class="item-product__summary">35 000₴</div>
+																<button type="button" class="item-product__button button">В кошик</button>
+															</div>
+														</article>
+													</li>
+													<li class="splide__slide">
+														<article class="item-product">
+															<div href="#" class="item-product__image">
+																<a href="#" class="item-product__image-link"><img class="ibg" src="img/products/01.webp" alt="Product" class="ibg"></a>
+																<div class="item-product__label">-20%</div>
+																<button class="item-product__wishlist _icon-heart"></button>
+															</div>
+															<h3 class="item-product__title">
+																<a href="#" class="item-product__link">Супник 480мл PP чорний з герметичною кришкою LF</a>
+															</h3>
+															<div class="item-product__switch switch-product">
+																<label class="switch-product__item">
+																	<input checked type="radio" name="product">
+																	500 шт в коробці
+																</label>
+																<label class="switch-product__item">
+																	<input type="radio" name="product">
+																	25 шт в коробці
+																</label>
+															</div>
+															<div class="item-product__body">
+																<div class="item-product__price">
+																	2.68₴ / 1шт
+																	<span class="item-product__discount">5.49₴ / 1шт</span>
+																</div>
+																<div data-min="1" data-max="999" class="counter">
+																	<button class="counter__btn counter__btn--decrement" type="button"></button>
+																	<input type="number" value="500">
+																	<button class="counter__btn counter__btn--increment" type="button"></button>
+																</div>
+															</div>
+															<div class="item-product__footer">
+																<div class="item-product__summary">35 000₴</div>
+																<button type="button" class="item-product__button button">В кошик</button>
+															</div>
+														</article>
+													</li>
+												</ul>
+											</div>
+											<div class="pagination">
+												<div class="splide__pagination"></div>
+											</div>
+										</div>
+									</div>
+									<div class="product-tabs__body">
+										<div class="product-tabs__slider splide splide--product splide--arrows">
+											<div class="splide__track">
+												<ul class="splide__list">
+													<li class="splide__slide">
+														<article class="item-product">
+															<div href="#" class="item-product__image">
+																<a href="#" class="item-product__image-link"><img class="ibg" src="img/products/01.webp" alt="Product" class="ibg"></a>
+																<div class="item-product__label">-20%</div>
+																<button class="item-product__wishlist _icon-heart"></button>
+															</div>
+															<h3 class="item-product__title">
+																<a href="#" class="item-product__link">Супник 480мл PP чорний з герметичною кришкою LF</a>
+															</h3>
+															<div class="item-product__switch switch-product">
+																<label class="switch-product__item">
+																	<input checked type="radio" name="product">
+																	500 шт в коробці
+																</label>
+																<label class="switch-product__item">
+																	<input type="radio" name="product">
+																	25 шт в коробці
+																</label>
+															</div>
+															<div class="item-product__body">
+																<div class="item-product__price">
+																	2.68₴ / 1шт
+																	<span class="item-product__discount">5.49₴ / 1шт</span>
+																</div>
+																<div data-min="1" data-max="999" class="counter">
+																	<button class="counter__btn counter__btn--decrement" type="button"></button>
+																	<input type="number" value="500">
+																	<button class="counter__btn counter__btn--increment" type="button"></button>
+																</div>
+															</div>
+															<div class="item-product__footer">
+																<div class="item-product__summary">35 000₴</div>
+																<button type="button" class="item-product__button button">В кошик</button>
+															</div>
+														</article>
+													</li>
+													<li class="splide__slide">
+														<article class="item-product">
+															<div href="#" class="item-product__image">
+																<a href="#" class="item-product__image-link"><img class="ibg" src="img/products/01.webp" alt="Product" class="ibg"></a>
+																<div class="item-product__label">-20%</div>
+																<button class="item-product__wishlist _icon-heart"></button>
+															</div>
+															<h3 class="item-product__title">
+																<a href="#" class="item-product__link">Супник 480мл PP чорний з герметичною кришкою LF</a>
+															</h3>
+															<div class="item-product__switch switch-product">
+																<label class="switch-product__item">
+																	<input checked type="radio" name="product">
+																	500 шт в коробці
+																</label>
+																<label class="switch-product__item">
+																	<input type="radio" name="product">
+																	25 шт в коробці
+																</label>
+															</div>
+															<div class="item-product__body">
+																<div class="item-product__price">
+																	2.68₴ / 1шт
+																	<span class="item-product__discount">5.49₴ / 1шт</span>
+																</div>
+																<div data-min="1" data-max="999" class="counter">
+																	<button class="counter__btn counter__btn--decrement" type="button"></button>
+																	<input type="number" value="500">
+																	<button class="counter__btn counter__btn--increment" type="button"></button>
+																</div>
+															</div>
+															<div class="item-product__footer">
+																<div class="item-product__summary">35 000₴</div>
+																<button type="button" class="item-product__button button">В кошик</button>
+															</div>
+														</article>
+													</li>
+													<li class="splide__slide">
+														<article class="item-product">
+															<div href="#" class="item-product__image">
+																<a href="#" class="item-product__image-link"><img class="ibg" src="img/products/01.webp" alt="Product" class="ibg"></a>
+																<div class="item-product__label">-20%</div>
+																<button class="item-product__wishlist _icon-heart"></button>
+															</div>
+															<h3 class="item-product__title">
+																<a href="#" class="item-product__link">Супник 480мл PP чорний з герметичною кришкою LF</a>
+															</h3>
+															<div class="item-product__switch switch-product">
+																<label class="switch-product__item">
+																	<input checked type="radio" name="product">
+																	500 шт в коробці
+																</label>
+																<label class="switch-product__item">
+																	<input type="radio" name="product">
+																	25 шт в коробці
+																</label>
+															</div>
+															<div class="item-product__body">
+																<div class="item-product__price">
+																	2.68₴ / 1шт
+																	<span class="item-product__discount">5.49₴ / 1шт</span>
+																</div>
+																<div data-min="1" data-max="999" class="counter">
+																	<button class="counter__btn counter__btn--decrement" type="button"></button>
+																	<input type="number" value="500">
+																	<button class="counter__btn counter__btn--increment" type="button"></button>
+																</div>
+															</div>
+															<div class="item-product__footer">
+																<div class="item-product__summary">35 000₴</div>
+																<button type="button" class="item-product__button button">В кошик</button>
+															</div>
+														</article>
+													</li>
+													<li class="splide__slide">
+														<article class="item-product">
+															<div href="#" class="item-product__image">
+																<a href="#" class="item-product__image-link"><img class="ibg" src="img/products/01.webp" alt="Product" class="ibg"></a>
+																<div class="item-product__label">-20%</div>
+																<button class="item-product__wishlist _icon-heart"></button>
+															</div>
+															<h3 class="item-product__title">
+																<a href="#" class="item-product__link">Супник 480мл PP чорний з герметичною кришкою LF</a>
+															</h3>
+															<div class="item-product__switch switch-product">
+																<label class="switch-product__item">
+																	<input checked type="radio" name="product">
+																	500 шт в коробці
+																</label>
+																<label class="switch-product__item">
+																	<input type="radio" name="product">
+																	25 шт в коробці
+																</label>
+															</div>
+															<div class="item-product__body">
+																<div class="item-product__price">
+																	2.68₴ / 1шт
+																	<span class="item-product__discount">5.49₴ / 1шт</span>
+																</div>
+																<div data-min="1" data-max="999" class="counter">
+																	<button class="counter__btn counter__btn--decrement" type="button"></button>
+																	<input type="number" value="500">
+																	<button class="counter__btn counter__btn--increment" type="button"></button>
+																</div>
+															</div>
+															<div class="item-product__footer">
+																<div class="item-product__summary">35 000₴</div>
+																<button type="button" class="item-product__button button">В кошик</button>
+															</div>
+														</article>
+													</li>
+												</ul>
+											</div>
+											<div class="pagination">
+												<div class="splide__pagination"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
 						<div class="product__block">
 							<div data-spoilers class="spoilers-product">
 								<details id="all-specs" data-open class="spoilers-product__item">
@@ -1311,853 +2285,6 @@
 								</details>
 							</div>
 							<div class="product__col">
-								<div data-slider-parent class="product__bundle bundle-product">
-									<div class="bundle-product__header">
-										<h3 class="bundle-product__title">
-											З цим товаром купують
-										</h3>
-										<div class="bundle-product__arrows slider-arrows">
-											<button class="slider-arrow slider-arrow--prev _icon-chevron-thin-left" type="button"></button>
-											<button class="slider-arrow slider-arrow--next _icon-chevron-thin-right" type="button"></button>
-										</div>
-									</div>
-									<div data-tabs class="product-tabs">
-										<div class="product-tabs__header">
-											<nav data-tabs-titles data-tabs-titles class="product-tabs__navigation">
-												<button type="button" class="product-tabs__title _tab-active">Стаканчити</button>
-												<button type="button" class="product-tabs__title">Серветки</button>
-												<button type="button" class="product-tabs__title">Сиропи</button>
-												<button type="button" class="product-tabs__title">Холдери</button>
-												<button type="button" class="product-tabs__title">Цукор</button>
-												<button type="button" class="product-tabs__title">Мішалки</button>
-											</nav>
-										</div>
-										<div data-tabs-body class="product-tabs__content">
-											<div class="product-tabs__body">
-												<div class="bundle-product__slider splide splide--arrows">
-													<div class="splide__track">
-														<ul class="splide__list">
-															<li class="splide__slide">
-																<article class="item-product item-product--simple">
-																	<div href="#" class="item-product__image">
-																		<a href="#" class="item-product__image-link"><img class="ibg" src="img/products/02.webp" alt="Product" class="ibg"></a>
-																		<div class="item-product__label">-20%</div>
-																		<button class="item-product__wishlist _icon-heart"></button>
-																	</div>
-																	<h3 class="item-product__title">
-																		<a href="#" class="item-product__link">Стакан купольний 420мл LF без кришки</a>
-																	</h3>
-																	<div class="item-product__body">
-																		<div class="item-product__price ">
-																			5.49₴ / 1шт
-																			<span class="item-product__discount">5.49₴ / 1шт</span>
-																		</div>
-																	</div>
-																	<div class="item-product__footer item-product__footer--simple">
-																		<button type="button" class="item-product__button button">В кошик</button>
-																	</div>
-																</article>
-															</li>
-															<li class="splide__slide">
-																<article class="item-product item-product--simple">
-																	<div href="#" class="item-product__image">
-																		<a href="#" class="item-product__image-link"><img class="ibg" src="img/products/02.webp" alt="Product" class="ibg"></a>
-																		<div class="item-product__label">-20%</div>
-																		<button class="item-product__wishlist _icon-heart"></button>
-																	</div>
-																	<h3 class="item-product__title">
-																		<a href="#" class="item-product__link">Стакан купольний 420мл LF без кришки</a>
-																	</h3>
-																	<div class="item-product__body">
-																		<div class="item-product__price ">
-																			5.49₴ / 1шт
-																			<span class="item-product__discount">5.49₴ / 1шт</span>
-																		</div>
-																	</div>
-																	<div class="item-product__footer item-product__footer--simple">
-																		<button type="button" class="item-product__button button">В кошик</button>
-																	</div>
-																</article>
-															</li>
-															<li class="splide__slide">
-																<article class="item-product item-product--simple">
-																	<div href="#" class="item-product__image">
-																		<a href="#" class="item-product__image-link"><img class="ibg" src="img/products/02.webp" alt="Product" class="ibg"></a>
-																		<div class="item-product__label">-20%</div>
-																		<button class="item-product__wishlist _icon-heart"></button>
-																	</div>
-																	<h3 class="item-product__title">
-																		<a href="#" class="item-product__link">Стакан купольний 420мл LF без кришки</a>
-																	</h3>
-																	<div class="item-product__body">
-																		<div class="item-product__price ">
-																			5.49₴ / 1шт
-																			<span class="item-product__discount">5.49₴ / 1шт</span>
-																		</div>
-																	</div>
-																	<div class="item-product__footer item-product__footer--simple">
-																		<button type="button" class="item-product__button button">В кошик</button>
-																	</div>
-																</article>
-															</li>
-															<li class="splide__slide">
-																<article class="item-product item-product--simple">
-																	<div href="#" class="item-product__image">
-																		<a href="#" class="item-product__image-link"><img class="ibg" src="img/products/02.webp" alt="Product" class="ibg"></a>
-																		<div class="item-product__label">-20%</div>
-																		<button class="item-product__wishlist _icon-heart"></button>
-																	</div>
-																	<h3 class="item-product__title">
-																		<a href="#" class="item-product__link">Стакан купольний 420мл LF без кришки</a>
-																	</h3>
-																	<div class="item-product__body">
-																		<div class="item-product__price ">
-																			5.49₴ / 1шт
-																			<span class="item-product__discount">5.49₴ / 1шт</span>
-																		</div>
-																	</div>
-																	<div class="item-product__footer item-product__footer--simple">
-																		<button type="button" class="item-product__button button">В кошик</button>
-																	</div>
-																</article>
-															</li>
-															<li class="splide__slide">
-																<article class="item-product item-product--simple">
-																	<div href="#" class="item-product__image">
-																		<a href="#" class="item-product__image-link"><img class="ibg" src="img/products/02.webp" alt="Product" class="ibg"></a>
-																		<div class="item-product__label">-20%</div>
-																		<button class="item-product__wishlist _icon-heart"></button>
-																	</div>
-																	<h3 class="item-product__title">
-																		<a href="#" class="item-product__link">Стакан купольний 420мл LF без кришки</a>
-																	</h3>
-																	<div class="item-product__body">
-																		<div class="item-product__price ">
-																			5.49₴ / 1шт
-																			<span class="item-product__discount">5.49₴ / 1шт</span>
-																		</div>
-																	</div>
-																	<div class="item-product__footer item-product__footer--simple">
-																		<button type="button" class="item-product__button button">В кошик</button>
-																	</div>
-																</article>
-															</li>
-															<li class="splide__slide">
-																<article class="item-product item-product--simple">
-																	<div href="#" class="item-product__image">
-																		<a href="#" class="item-product__image-link"><img class="ibg" src="img/products/02.webp" alt="Product" class="ibg"></a>
-																		<div class="item-product__label">-20%</div>
-																		<button class="item-product__wishlist _icon-heart"></button>
-																	</div>
-																	<h3 class="item-product__title">
-																		<a href="#" class="item-product__link">Стакан купольний 420мл LF без кришки</a>
-																	</h3>
-																	<div class="item-product__body">
-																		<div class="item-product__price ">
-																			5.49₴ / 1шт
-																			<span class="item-product__discount">5.49₴ / 1шт</span>
-																		</div>
-																	</div>
-																	<div class="item-product__footer item-product__footer--simple">
-																		<button type="button" class="item-product__button button">В кошик</button>
-																	</div>
-																</article>
-															</li>
-														</ul>
-													</div>
-													<div class="pagination">
-														<div class="splide__pagination"></div>
-													</div>
-												</div>
-											</div>
-											<div class="product-tabs__body">
-												<div class="bundle-product__slider splide splide--arrows">
-													<div class="splide__track">
-														<ul class="splide__list">
-															<li class="splide__slide">
-																<article class="item-product item-product--simple">
-																	<div href="#" class="item-product__image">
-																		<a href="#" class="item-product__image-link"><img class="ibg" src="img/products/02.webp" alt="Product" class="ibg"></a>
-																		<div class="item-product__label">-20%</div>
-																		<button class="item-product__wishlist _icon-heart"></button>
-																	</div>
-																	<h3 class="item-product__title">
-																		<a href="#" class="item-product__link">Стакан купольний 420мл LF без кришки</a>
-																	</h3>
-																	<div class="item-product__body">
-																		<div class="item-product__price ">
-																			5.49₴ / 1шт
-																			<span class="item-product__discount">5.49₴ / 1шт</span>
-																		</div>
-																	</div>
-																	<div class="item-product__footer item-product__footer--simple">
-																		<button type="button" class="item-product__button button">В кошик</button>
-																	</div>
-																</article>
-															</li>
-															<li class="splide__slide">
-																<article class="item-product item-product--simple">
-																	<div href="#" class="item-product__image">
-																		<a href="#" class="item-product__image-link"><img class="ibg" src="img/products/02.webp" alt="Product" class="ibg"></a>
-																		<div class="item-product__label">-20%</div>
-																		<button class="item-product__wishlist _icon-heart"></button>
-																	</div>
-																	<h3 class="item-product__title">
-																		<a href="#" class="item-product__link">Стакан купольний 420мл LF без кришки</a>
-																	</h3>
-																	<div class="item-product__body">
-																		<div class="item-product__price ">
-																			5.49₴ / 1шт
-																			<span class="item-product__discount">5.49₴ / 1шт</span>
-																		</div>
-																	</div>
-																	<div class="item-product__footer item-product__footer--simple">
-																		<button type="button" class="item-product__button button">В кошик</button>
-																	</div>
-																</article>
-															</li>
-															<li class="splide__slide">
-																<article class="item-product item-product--simple">
-																	<div href="#" class="item-product__image">
-																		<a href="#" class="item-product__image-link"><img class="ibg" src="img/products/02.webp" alt="Product" class="ibg"></a>
-																		<div class="item-product__label">-20%</div>
-																		<button class="item-product__wishlist _icon-heart"></button>
-																	</div>
-																	<h3 class="item-product__title">
-																		<a href="#" class="item-product__link">Стакан купольний 420мл LF без кришки</a>
-																	</h3>
-																	<div class="item-product__body">
-																		<div class="item-product__price ">
-																			5.49₴ / 1шт
-																			<span class="item-product__discount">5.49₴ / 1шт</span>
-																		</div>
-																	</div>
-																	<div class="item-product__footer item-product__footer--simple">
-																		<button type="button" class="item-product__button button">В кошик</button>
-																	</div>
-																</article>
-															</li>
-															<li class="splide__slide">
-																<article class="item-product item-product--simple">
-																	<div href="#" class="item-product__image">
-																		<a href="#" class="item-product__image-link"><img class="ibg" src="img/products/02.webp" alt="Product" class="ibg"></a>
-																		<div class="item-product__label">-20%</div>
-																		<button class="item-product__wishlist _icon-heart"></button>
-																	</div>
-																	<h3 class="item-product__title">
-																		<a href="#" class="item-product__link">Стакан купольний 420мл LF без кришки</a>
-																	</h3>
-																	<div class="item-product__body">
-																		<div class="item-product__price ">
-																			5.49₴ / 1шт
-																			<span class="item-product__discount">5.49₴ / 1шт</span>
-																		</div>
-																	</div>
-																	<div class="item-product__footer item-product__footer--simple">
-																		<button type="button" class="item-product__button button">В кошик</button>
-																	</div>
-																</article>
-															</li>
-															<li class="splide__slide">
-																<article class="item-product item-product--simple">
-																	<div href="#" class="item-product__image">
-																		<a href="#" class="item-product__image-link"><img class="ibg" src="img/products/02.webp" alt="Product" class="ibg"></a>
-																		<div class="item-product__label">-20%</div>
-																		<button class="item-product__wishlist _icon-heart"></button>
-																	</div>
-																	<h3 class="item-product__title">
-																		<a href="#" class="item-product__link">Стакан купольний 420мл LF без кришки</a>
-																	</h3>
-																	<div class="item-product__body">
-																		<div class="item-product__price ">
-																			5.49₴ / 1шт
-																			<span class="item-product__discount">5.49₴ / 1шт</span>
-																		</div>
-																	</div>
-																	<div class="item-product__footer item-product__footer--simple">
-																		<button type="button" class="item-product__button button">В кошик</button>
-																	</div>
-																</article>
-															</li>
-															<li class="splide__slide">
-																<article class="item-product item-product--simple">
-																	<div href="#" class="item-product__image">
-																		<a href="#" class="item-product__image-link"><img class="ibg" src="img/products/02.webp" alt="Product" class="ibg"></a>
-																		<div class="item-product__label">-20%</div>
-																		<button class="item-product__wishlist _icon-heart"></button>
-																	</div>
-																	<h3 class="item-product__title">
-																		<a href="#" class="item-product__link">Стакан купольний 420мл LF без кришки</a>
-																	</h3>
-																	<div class="item-product__body">
-																		<div class="item-product__price ">
-																			5.49₴ / 1шт
-																			<span class="item-product__discount">5.49₴ / 1шт</span>
-																		</div>
-																	</div>
-																	<div class="item-product__footer item-product__footer--simple">
-																		<button type="button" class="item-product__button button">В кошик</button>
-																	</div>
-																</article>
-															</li>
-														</ul>
-													</div>
-													<div class="pagination">
-														<div class="splide__pagination"></div>
-													</div>
-												</div>
-											</div>
-											<div class="product-tabs__body">
-												<div class="bundle-product__slider splide splide--arrows">
-													<div class="splide__track">
-														<ul class="splide__list">
-															<li class="splide__slide">
-																<article class="item-product item-product--simple">
-																	<div href="#" class="item-product__image">
-																		<a href="#" class="item-product__image-link"><img class="ibg" src="img/products/02.webp" alt="Product" class="ibg"></a>
-																		<div class="item-product__label">-20%</div>
-																		<button class="item-product__wishlist _icon-heart"></button>
-																	</div>
-																	<h3 class="item-product__title">
-																		<a href="#" class="item-product__link">Стакан купольний 420мл LF без кришки</a>
-																	</h3>
-																	<div class="item-product__body">
-																		<div class="item-product__price ">
-																			5.49₴ / 1шт
-																			<span class="item-product__discount">5.49₴ / 1шт</span>
-																		</div>
-																	</div>
-																	<div class="item-product__footer item-product__footer--simple">
-																		<button type="button" class="item-product__button button">В кошик</button>
-																	</div>
-																</article>
-															</li>
-															<li class="splide__slide">
-																<article class="item-product item-product--simple">
-																	<div href="#" class="item-product__image">
-																		<a href="#" class="item-product__image-link"><img class="ibg" src="img/products/02.webp" alt="Product" class="ibg"></a>
-																		<div class="item-product__label">-20%</div>
-																		<button class="item-product__wishlist _icon-heart"></button>
-																	</div>
-																	<h3 class="item-product__title">
-																		<a href="#" class="item-product__link">Стакан купольний 420мл LF без кришки</a>
-																	</h3>
-																	<div class="item-product__body">
-																		<div class="item-product__price ">
-																			5.49₴ / 1шт
-																			<span class="item-product__discount">5.49₴ / 1шт</span>
-																		</div>
-																	</div>
-																	<div class="item-product__footer item-product__footer--simple">
-																		<button type="button" class="item-product__button button">В кошик</button>
-																	</div>
-																</article>
-															</li>
-															<li class="splide__slide">
-																<article class="item-product item-product--simple">
-																	<div href="#" class="item-product__image">
-																		<a href="#" class="item-product__image-link"><img class="ibg" src="img/products/02.webp" alt="Product" class="ibg"></a>
-																		<div class="item-product__label">-20%</div>
-																		<button class="item-product__wishlist _icon-heart"></button>
-																	</div>
-																	<h3 class="item-product__title">
-																		<a href="#" class="item-product__link">Стакан купольний 420мл LF без кришки</a>
-																	</h3>
-																	<div class="item-product__body">
-																		<div class="item-product__price ">
-																			5.49₴ / 1шт
-																			<span class="item-product__discount">5.49₴ / 1шт</span>
-																		</div>
-																	</div>
-																	<div class="item-product__footer item-product__footer--simple">
-																		<button type="button" class="item-product__button button">В кошик</button>
-																	</div>
-																</article>
-															</li>
-															<li class="splide__slide">
-																<article class="item-product item-product--simple">
-																	<div href="#" class="item-product__image">
-																		<a href="#" class="item-product__image-link"><img class="ibg" src="img/products/02.webp" alt="Product" class="ibg"></a>
-																		<div class="item-product__label">-20%</div>
-																		<button class="item-product__wishlist _icon-heart"></button>
-																	</div>
-																	<h3 class="item-product__title">
-																		<a href="#" class="item-product__link">Стакан купольний 420мл LF без кришки</a>
-																	</h3>
-																	<div class="item-product__body">
-																		<div class="item-product__price ">
-																			5.49₴ / 1шт
-																			<span class="item-product__discount">5.49₴ / 1шт</span>
-																		</div>
-																	</div>
-																	<div class="item-product__footer item-product__footer--simple">
-																		<button type="button" class="item-product__button button">В кошик</button>
-																	</div>
-																</article>
-															</li>
-															<li class="splide__slide">
-																<article class="item-product item-product--simple">
-																	<div href="#" class="item-product__image">
-																		<a href="#" class="item-product__image-link"><img class="ibg" src="img/products/02.webp" alt="Product" class="ibg"></a>
-																		<div class="item-product__label">-20%</div>
-																		<button class="item-product__wishlist _icon-heart"></button>
-																	</div>
-																	<h3 class="item-product__title">
-																		<a href="#" class="item-product__link">Стакан купольний 420мл LF без кришки</a>
-																	</h3>
-																	<div class="item-product__body">
-																		<div class="item-product__price ">
-																			5.49₴ / 1шт
-																			<span class="item-product__discount">5.49₴ / 1шт</span>
-																		</div>
-																	</div>
-																	<div class="item-product__footer item-product__footer--simple">
-																		<button type="button" class="item-product__button button">В кошик</button>
-																	</div>
-																</article>
-															</li>
-															<li class="splide__slide">
-																<article class="item-product item-product--simple">
-																	<div href="#" class="item-product__image">
-																		<a href="#" class="item-product__image-link"><img class="ibg" src="img/products/02.webp" alt="Product" class="ibg"></a>
-																		<div class="item-product__label">-20%</div>
-																		<button class="item-product__wishlist _icon-heart"></button>
-																	</div>
-																	<h3 class="item-product__title">
-																		<a href="#" class="item-product__link">Стакан купольний 420мл LF без кришки</a>
-																	</h3>
-																	<div class="item-product__body">
-																		<div class="item-product__price ">
-																			5.49₴ / 1шт
-																			<span class="item-product__discount">5.49₴ / 1шт</span>
-																		</div>
-																	</div>
-																	<div class="item-product__footer item-product__footer--simple">
-																		<button type="button" class="item-product__button button">В кошик</button>
-																	</div>
-																</article>
-															</li>
-														</ul>
-													</div>
-													<div class="pagination">
-														<div class="splide__pagination"></div>
-													</div>
-												</div>
-											</div>
-											<div class="product-tabs__body">
-												<div class="bundle-product__slider splide splide--arrows">
-													<div class="splide__track">
-														<ul class="splide__list">
-															<li class="splide__slide">
-																<article class="item-product item-product--simple">
-																	<div href="#" class="item-product__image">
-																		<a href="#" class="item-product__image-link"><img class="ibg" src="img/products/02.webp" alt="Product" class="ibg"></a>
-																		<div class="item-product__label">-20%</div>
-																		<button class="item-product__wishlist _icon-heart"></button>
-																	</div>
-																	<h3 class="item-product__title">
-																		<a href="#" class="item-product__link">Стакан купольний 420мл LF без кришки</a>
-																	</h3>
-																	<div class="item-product__body">
-																		<div class="item-product__price ">
-																			5.49₴ / 1шт
-																			<span class="item-product__discount">5.49₴ / 1шт</span>
-																		</div>
-																	</div>
-																	<div class="item-product__footer item-product__footer--simple">
-																		<button type="button" class="item-product__button button">В кошик</button>
-																	</div>
-																</article>
-															</li>
-															<li class="splide__slide">
-																<article class="item-product item-product--simple">
-																	<div href="#" class="item-product__image">
-																		<a href="#" class="item-product__image-link"><img class="ibg" src="img/products/02.webp" alt="Product" class="ibg"></a>
-																		<div class="item-product__label">-20%</div>
-																		<button class="item-product__wishlist _icon-heart"></button>
-																	</div>
-																	<h3 class="item-product__title">
-																		<a href="#" class="item-product__link">Стакан купольний 420мл LF без кришки</a>
-																	</h3>
-																	<div class="item-product__body">
-																		<div class="item-product__price ">
-																			5.49₴ / 1шт
-																			<span class="item-product__discount">5.49₴ / 1шт</span>
-																		</div>
-																	</div>
-																	<div class="item-product__footer item-product__footer--simple">
-																		<button type="button" class="item-product__button button">В кошик</button>
-																	</div>
-																</article>
-															</li>
-															<li class="splide__slide">
-																<article class="item-product item-product--simple">
-																	<div href="#" class="item-product__image">
-																		<a href="#" class="item-product__image-link"><img class="ibg" src="img/products/02.webp" alt="Product" class="ibg"></a>
-																		<div class="item-product__label">-20%</div>
-																		<button class="item-product__wishlist _icon-heart"></button>
-																	</div>
-																	<h3 class="item-product__title">
-																		<a href="#" class="item-product__link">Стакан купольний 420мл LF без кришки</a>
-																	</h3>
-																	<div class="item-product__body">
-																		<div class="item-product__price ">
-																			5.49₴ / 1шт
-																			<span class="item-product__discount">5.49₴ / 1шт</span>
-																		</div>
-																	</div>
-																	<div class="item-product__footer item-product__footer--simple">
-																		<button type="button" class="item-product__button button">В кошик</button>
-																	</div>
-																</article>
-															</li>
-															<li class="splide__slide">
-																<article class="item-product item-product--simple">
-																	<div href="#" class="item-product__image">
-																		<a href="#" class="item-product__image-link"><img class="ibg" src="img/products/02.webp" alt="Product" class="ibg"></a>
-																		<div class="item-product__label">-20%</div>
-																		<button class="item-product__wishlist _icon-heart"></button>
-																	</div>
-																	<h3 class="item-product__title">
-																		<a href="#" class="item-product__link">Стакан купольний 420мл LF без кришки</a>
-																	</h3>
-																	<div class="item-product__body">
-																		<div class="item-product__price ">
-																			5.49₴ / 1шт
-																			<span class="item-product__discount">5.49₴ / 1шт</span>
-																		</div>
-																	</div>
-																	<div class="item-product__footer item-product__footer--simple">
-																		<button type="button" class="item-product__button button">В кошик</button>
-																	</div>
-																</article>
-															</li>
-															<li class="splide__slide">
-																<article class="item-product item-product--simple">
-																	<div href="#" class="item-product__image">
-																		<a href="#" class="item-product__image-link"><img class="ibg" src="img/products/02.webp" alt="Product" class="ibg"></a>
-																		<div class="item-product__label">-20%</div>
-																		<button class="item-product__wishlist _icon-heart"></button>
-																	</div>
-																	<h3 class="item-product__title">
-																		<a href="#" class="item-product__link">Стакан купольний 420мл LF без кришки</a>
-																	</h3>
-																	<div class="item-product__body">
-																		<div class="item-product__price ">
-																			5.49₴ / 1шт
-																			<span class="item-product__discount">5.49₴ / 1шт</span>
-																		</div>
-																	</div>
-																	<div class="item-product__footer item-product__footer--simple">
-																		<button type="button" class="item-product__button button">В кошик</button>
-																	</div>
-																</article>
-															</li>
-															<li class="splide__slide">
-																<article class="item-product item-product--simple">
-																	<div href="#" class="item-product__image">
-																		<a href="#" class="item-product__image-link"><img class="ibg" src="img/products/02.webp" alt="Product" class="ibg"></a>
-																		<div class="item-product__label">-20%</div>
-																		<button class="item-product__wishlist _icon-heart"></button>
-																	</div>
-																	<h3 class="item-product__title">
-																		<a href="#" class="item-product__link">Стакан купольний 420мл LF без кришки</a>
-																	</h3>
-																	<div class="item-product__body">
-																		<div class="item-product__price ">
-																			5.49₴ / 1шт
-																			<span class="item-product__discount">5.49₴ / 1шт</span>
-																		</div>
-																	</div>
-																	<div class="item-product__footer item-product__footer--simple">
-																		<button type="button" class="item-product__button button">В кошик</button>
-																	</div>
-																</article>
-															</li>
-														</ul>
-													</div>
-													<div class="pagination">
-														<div class="splide__pagination"></div>
-													</div>
-												</div>
-											</div>
-											<div class="product-tabs__body">
-												<div class="bundle-product__slider splide splide--arrows">
-													<div class="splide__track">
-														<ul class="splide__list">
-															<li class="splide__slide">
-																<article class="item-product item-product--simple">
-																	<div href="#" class="item-product__image">
-																		<a href="#" class="item-product__image-link"><img class="ibg" src="img/products/02.webp" alt="Product" class="ibg"></a>
-																		<div class="item-product__label">-20%</div>
-																		<button class="item-product__wishlist _icon-heart"></button>
-																	</div>
-																	<h3 class="item-product__title">
-																		<a href="#" class="item-product__link">Стакан купольний 420мл LF без кришки</a>
-																	</h3>
-																	<div class="item-product__body">
-																		<div class="item-product__price ">
-																			5.49₴ / 1шт
-																			<span class="item-product__discount">5.49₴ / 1шт</span>
-																		</div>
-																	</div>
-																	<div class="item-product__footer item-product__footer--simple">
-																		<button type="button" class="item-product__button button">В кошик</button>
-																	</div>
-																</article>
-															</li>
-															<li class="splide__slide">
-																<article class="item-product item-product--simple">
-																	<div href="#" class="item-product__image">
-																		<a href="#" class="item-product__image-link"><img class="ibg" src="img/products/02.webp" alt="Product" class="ibg"></a>
-																		<div class="item-product__label">-20%</div>
-																		<button class="item-product__wishlist _icon-heart"></button>
-																	</div>
-																	<h3 class="item-product__title">
-																		<a href="#" class="item-product__link">Стакан купольний 420мл LF без кришки</a>
-																	</h3>
-																	<div class="item-product__body">
-																		<div class="item-product__price ">
-																			5.49₴ / 1шт
-																			<span class="item-product__discount">5.49₴ / 1шт</span>
-																		</div>
-																	</div>
-																	<div class="item-product__footer item-product__footer--simple">
-																		<button type="button" class="item-product__button button">В кошик</button>
-																	</div>
-																</article>
-															</li>
-															<li class="splide__slide">
-																<article class="item-product item-product--simple">
-																	<div href="#" class="item-product__image">
-																		<a href="#" class="item-product__image-link"><img class="ibg" src="img/products/02.webp" alt="Product" class="ibg"></a>
-																		<div class="item-product__label">-20%</div>
-																		<button class="item-product__wishlist _icon-heart"></button>
-																	</div>
-																	<h3 class="item-product__title">
-																		<a href="#" class="item-product__link">Стакан купольний 420мл LF без кришки</a>
-																	</h3>
-																	<div class="item-product__body">
-																		<div class="item-product__price ">
-																			5.49₴ / 1шт
-																			<span class="item-product__discount">5.49₴ / 1шт</span>
-																		</div>
-																	</div>
-																	<div class="item-product__footer item-product__footer--simple">
-																		<button type="button" class="item-product__button button">В кошик</button>
-																	</div>
-																</article>
-															</li>
-															<li class="splide__slide">
-																<article class="item-product item-product--simple">
-																	<div href="#" class="item-product__image">
-																		<a href="#" class="item-product__image-link"><img class="ibg" src="img/products/02.webp" alt="Product" class="ibg"></a>
-																		<div class="item-product__label">-20%</div>
-																		<button class="item-product__wishlist _icon-heart"></button>
-																	</div>
-																	<h3 class="item-product__title">
-																		<a href="#" class="item-product__link">Стакан купольний 420мл LF без кришки</a>
-																	</h3>
-																	<div class="item-product__body">
-																		<div class="item-product__price ">
-																			5.49₴ / 1шт
-																			<span class="item-product__discount">5.49₴ / 1шт</span>
-																		</div>
-																	</div>
-																	<div class="item-product__footer item-product__footer--simple">
-																		<button type="button" class="item-product__button button">В кошик</button>
-																	</div>
-																</article>
-															</li>
-															<li class="splide__slide">
-																<article class="item-product item-product--simple">
-																	<div href="#" class="item-product__image">
-																		<a href="#" class="item-product__image-link"><img class="ibg" src="img/products/02.webp" alt="Product" class="ibg"></a>
-																		<div class="item-product__label">-20%</div>
-																		<button class="item-product__wishlist _icon-heart"></button>
-																	</div>
-																	<h3 class="item-product__title">
-																		<a href="#" class="item-product__link">Стакан купольний 420мл LF без кришки</a>
-																	</h3>
-																	<div class="item-product__body">
-																		<div class="item-product__price ">
-																			5.49₴ / 1шт
-																			<span class="item-product__discount">5.49₴ / 1шт</span>
-																		</div>
-																	</div>
-																	<div class="item-product__footer item-product__footer--simple">
-																		<button type="button" class="item-product__button button">В кошик</button>
-																	</div>
-																</article>
-															</li>
-															<li class="splide__slide">
-																<article class="item-product item-product--simple">
-																	<div href="#" class="item-product__image">
-																		<a href="#" class="item-product__image-link"><img class="ibg" src="img/products/02.webp" alt="Product" class="ibg"></a>
-																		<div class="item-product__label">-20%</div>
-																		<button class="item-product__wishlist _icon-heart"></button>
-																	</div>
-																	<h3 class="item-product__title">
-																		<a href="#" class="item-product__link">Стакан купольний 420мл LF без кришки</a>
-																	</h3>
-																	<div class="item-product__body">
-																		<div class="item-product__price ">
-																			5.49₴ / 1шт
-																			<span class="item-product__discount">5.49₴ / 1шт</span>
-																		</div>
-																	</div>
-																	<div class="item-product__footer item-product__footer--simple">
-																		<button type="button" class="item-product__button button">В кошик</button>
-																	</div>
-																</article>
-															</li>
-														</ul>
-													</div>
-												</div>
-												<div class="pagination">
-													<div class="splide__pagination"></div>
-												</div>
-											</div>
-											<div class="product-tabs__body">
-												<div class="bundle-product__slider splide splide--arrows">
-													<div class="splide__track">
-														<ul class="splide__list">
-															<li class="splide__slide">
-																<article class="item-product item-product--simple">
-																	<div href="#" class="item-product__image">
-																		<a href="#" class="item-product__image-link"><img class="ibg" src="img/products/02.webp" alt="Product" class="ibg"></a>
-																		<div class="item-product__label">-20%</div>
-																		<button class="item-product__wishlist _icon-heart"></button>
-																	</div>
-																	<h3 class="item-product__title">
-																		<a href="#" class="item-product__link">Стакан купольний 420мл LF без кришки</a>
-																	</h3>
-																	<div class="item-product__body">
-																		<div class="item-product__price ">
-																			5.49₴ / 1шт
-																			<span class="item-product__discount">5.49₴ / 1шт</span>
-																		</div>
-																	</div>
-																	<div class="item-product__footer item-product__footer--simple">
-																		<button type="button" class="item-product__button button">В кошик</button>
-																	</div>
-																</article>
-															</li>
-															<li class="splide__slide">
-																<article class="item-product item-product--simple">
-																	<div href="#" class="item-product__image">
-																		<a href="#" class="item-product__image-link"><img class="ibg" src="img/products/02.webp" alt="Product" class="ibg"></a>
-																		<div class="item-product__label">-20%</div>
-																		<button class="item-product__wishlist _icon-heart"></button>
-																	</div>
-																	<h3 class="item-product__title">
-																		<a href="#" class="item-product__link">Стакан купольний 420мл LF без кришки</a>
-																	</h3>
-																	<div class="item-product__body">
-																		<div class="item-product__price ">
-																			5.49₴ / 1шт
-																			<span class="item-product__discount">5.49₴ / 1шт</span>
-																		</div>
-																	</div>
-																	<div class="item-product__footer item-product__footer--simple">
-																		<button type="button" class="item-product__button button">В кошик</button>
-																	</div>
-																</article>
-															</li>
-															<li class="splide__slide">
-																<article class="item-product item-product--simple">
-																	<div href="#" class="item-product__image">
-																		<a href="#" class="item-product__image-link"><img class="ibg" src="img/products/02.webp" alt="Product" class="ibg"></a>
-																		<div class="item-product__label">-20%</div>
-																		<button class="item-product__wishlist _icon-heart"></button>
-																	</div>
-																	<h3 class="item-product__title">
-																		<a href="#" class="item-product__link">Стакан купольний 420мл LF без кришки</a>
-																	</h3>
-																	<div class="item-product__body">
-																		<div class="item-product__price ">
-																			5.49₴ / 1шт
-																			<span class="item-product__discount">5.49₴ / 1шт</span>
-																		</div>
-																	</div>
-																	<div class="item-product__footer item-product__footer--simple">
-																		<button type="button" class="item-product__button button">В кошик</button>
-																	</div>
-																</article>
-															</li>
-															<li class="splide__slide">
-																<article class="item-product item-product--simple">
-																	<div href="#" class="item-product__image">
-																		<a href="#" class="item-product__image-link"><img class="ibg" src="img/products/02.webp" alt="Product" class="ibg"></a>
-																		<div class="item-product__label">-20%</div>
-																		<button class="item-product__wishlist _icon-heart"></button>
-																	</div>
-																	<h3 class="item-product__title">
-																		<a href="#" class="item-product__link">Стакан купольний 420мл LF без кришки</a>
-																	</h3>
-																	<div class="item-product__body">
-																		<div class="item-product__price ">
-																			5.49₴ / 1шт
-																			<span class="item-product__discount">5.49₴ / 1шт</span>
-																		</div>
-																	</div>
-																	<div class="item-product__footer item-product__footer--simple">
-																		<button type="button" class="item-product__button button">В кошик</button>
-																	</div>
-																</article>
-															</li>
-															<li class="splide__slide">
-																<article class="item-product item-product--simple">
-																	<div href="#" class="item-product__image">
-																		<a href="#" class="item-product__image-link"><img class="ibg" src="img/products/02.webp" alt="Product" class="ibg"></a>
-																		<div class="item-product__label">-20%</div>
-																		<button class="item-product__wishlist _icon-heart"></button>
-																	</div>
-																	<h3 class="item-product__title">
-																		<a href="#" class="item-product__link">Стакан купольний 420мл LF без кришки</a>
-																	</h3>
-																	<div class="item-product__body">
-																		<div class="item-product__price ">
-																			5.49₴ / 1шт
-																			<span class="item-product__discount">5.49₴ / 1шт</span>
-																		</div>
-																	</div>
-																	<div class="item-product__footer item-product__footer--simple">
-																		<button type="button" class="item-product__button button">В кошик</button>
-																	</div>
-																</article>
-															</li>
-															<li class="splide__slide">
-																<article class="item-product item-product--simple">
-																	<div href="#" class="item-product__image">
-																		<a href="#" class="item-product__image-link"><img class="ibg" src="img/products/02.webp" alt="Product" class="ibg"></a>
-																		<div class="item-product__label">-20%</div>
-																		<button class="item-product__wishlist _icon-heart"></button>
-																	</div>
-																	<h3 class="item-product__title">
-																		<a href="#" class="item-product__link">Стакан купольний 420мл LF без кришки</a>
-																	</h3>
-																	<div class="item-product__body">
-																		<div class="item-product__price ">
-																			5.49₴ / 1шт
-																			<span class="item-product__discount">5.49₴ / 1шт</span>
-																		</div>
-																	</div>
-																	<div class="item-product__footer item-product__footer--simple">
-																		<button type="button" class="item-product__button button">В кошик</button>
-																	</div>
-																</article>
-															</li>
-														</ul>
-													</div>
-													<div class="pagination">
-														<div class="splide__pagination"></div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
 								<div class="product__info info-product">
 									<div class="info-product__block">
 										<h4 class="info-product__title">
@@ -2254,36 +2381,9 @@
 							</div>
 						</div>
 					</div>
-					<div class="product__help-banner help-banner">
-						<div class="help-banner__decor help-banner__decor--left">
-							<svg xmlns="http://www.w3.org/2000/svg" width="467" height="293" viewBox="0 0 467 293" fill="none">
-								<path d="M455.387 404.774C449.107 405.058 419.91 415.375 389.917 427.976C359.925 440.578 328.525 451.894 320.023 452.728L304.365 454.337L300.545 369.957C296.766 286.476 296.705 285.129 285.554 277.089C262.762 260.131 238.357 267.083 142.688 318.187C108.882 335.909 79.8272 349.367 78.4206 348.082C77.0141 346.796 95.6774 292.431 120.173 227.908C144.649 162.936 165.821 104.41 167.29 97.1481C172.023 72.6475 151.659 49.7329 126.541 50.8701C109.048 51.6621 77.9535 69.7104 -32.4792 142.172C-94.0165 182.736 -152.556 220.017 -162.71 224.075C-199.248 241.02 -196.024 222.884 -140.042 109.263C-70.9249 -31.9382 -55.3215 -74.4709 -75.3229 -69.5177C-84.661 -67.296 -97.6514 -46.4693 -148.228 47.5685C-221.238 182.2 -236.414 234.158 -210.934 260.888C-191.588 281.15 -155.479 264.674 -20.6185 175.815C116.403 85.06 127.821 79.1461 128.532 94.855C128.736 99.3433 112.785 144.14 93.0419 194.506C37.4831 337.342 29.8331 366.922 44.5912 385.143C56.0267 399.467 78.2302 393.515 147.576 356.644C232.315 312.331 253.928 303.257 260.023 308.828C263.305 311.827 264.219 332.024 262.48 373.03C258.816 470.791 268.415 494.193 311.923 492.223C341.078 490.903 363.119 481.36 419.518 446.425C465.864 417.792 477.365 403.779 455.387 404.774Z" fill="#3CA79A" />
-							</svg>
-						</div>
-						<div class="help-banner__decor help-banner__decor--right">
-							<svg xmlns="http://www.w3.org/2000/svg" width="345" height="291" viewBox="0 0 345 291" fill="none">
-								<path d="M696.123 183.024C689.937 184.141 662.372 198.251 634.323 214.731C606.274 231.211 576.659 246.604 568.344 248.563L553.039 252.24L538.026 169.12C523.172 86.8832 522.932 85.5568 510.811 79.0717C485.966 65.297 462.702 75.4341 374.684 138.814C343.536 160.876 316.531 178.08 314.965 176.993C313.4 175.906 324.664 119.542 340.357 52.3332C355.97 -15.3177 369.166 -76.1403 369.656 -83.5336C371.088 -108.446 347.856 -128.447 323.112 -123.978C305.88 -120.866 277.463 -98.8406 177.654 -12.3297C122.061 36.0621 69.0024 80.8004 59.4787 86.173C25.5203 107.829 26.3027 89.4259 66.6694 -30.6342C116.384 -179.776 126.189 -224.007 107.025 -216.436C98.0652 -212.992 87.9614 -190.622 50.3468 -90.6907C-4.10031 52.4577 -12.2286 105.973 16.5824 129.076C38.4516 146.584 72.048 125.449 193.886 19.4367C317.613 -88.7434 328.143 -96.1239 330.938 -80.6493C331.737 -76.228 321.889 -29.7069 309.023 22.8381C272.963 171.796 269.317 202.131 286.368 218.227C299.608 230.902 320.822 222.048 384.645 176.278C462.735 121.084 482.948 109.215 489.73 113.925C493.382 116.461 496.976 136.357 500.708 177.23C510.084 274.609 522.711 296.525 565.571 288.784C594.291 283.596 614.866 271.206 666.115 229.077C708.24 194.532 717.774 179.113 696.123 183.024Z" fill="#3CA79A" />
-							</svg>
-						</div>
-						<div class="help-banner__avatar">
-							<img src="img/products/avatar.webp" alt="Avatar" class="ibg ibg--top-center">
-						</div>
-						<div class="help-banner__body">
-							<h3 class="help-banner__title">Вам потрібна наша допомога?<br><span class="help-banner__tablet-text">Наш
-									менеджер Ірина,
-									прокомунікує з
-									вами.</span></h3>
-							<div class="help-banner__text text">
-								<p>
-									Напишіть нам і наш консультант зв'яжеться з вами та допоможе з вибором товару.
-								</p>
-							</div>
-							<a href="#" class="help-banner__link button button--white">Консультація</a>
-						</div>
-					</div>
 					<section class="product__products-section products-section">
 						<h2 class="products-section__title section-title">
-							Схожі товари
+							Разом з цим купують
 						</h2>
 						<div data-tabs class="product-tabs">
 							<div class="product-tabs__header">

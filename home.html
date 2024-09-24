@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240917165455">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240924152952">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,13 +14,13 @@
 
 <body>
 	<div class="wrapper">
-		<div id="price-popup" aria-hidden="true" class="popup  popup--header">
+		<div id="price-popup" aria-hidden="true" class="popup popup--header">
 			<div class="popup__wrapper">
 				<div class="popup__content">
 					<div class="popup-header">
-						<div class="popup-header__header">
-							<h3 class="popup-header__title">Прайс продукції</h3>
-							<button data-close class="popup-header__close _icon-popup-cross" aria-label="close popup" type="button"></button>
+						<div class="popup-header__header header-popup">
+							<h3 class="header-popup__title">Прайс продукції</h3>
+							<button data-close class="header-popup__close _icon-popup-cross" aria-label="close popup" type="button"></button>
 						</div>
 						<div class="popup-header__body">
 							<div class="popup-header__aside">
@@ -53,13 +53,13 @@
 				</div>
 			</div>
 		</div>
-		<div id="samples-popup" aria-hidden="true" class="popup  popup--header">
+		<div id="samples-popup" aria-hidden="true" class="popup popup--header">
 			<div class="popup__wrapper">
 				<div class="popup__content">
 					<div class="popup-header">
-						<div class="popup-header__header">
-							<h3 class="popup-header__title">Отримай безкоштовні зразки нашої продукції та консультацію!</h3>
-							<button data-close class="popup-header__close _icon-popup-cross" aria-label="close popup" type="button"></button>
+						<div class="popup-header__header header-popup">
+							<h3 class="header-popup__title">Отримай безкоштовні зразки нашої продукції та консультацію!</h3>
+							<button data-close class="header-popup__close _icon-popup-cross" aria-label="close popup" type="button"></button>
 						</div>
 						<div class="popup-header__body">
 							<div class="popup-header__aside">
@@ -84,6 +84,45 @@
 								</div>
 								<button class="form-popup-header__button button">Отримати зразки</button>
 							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="product-popup" aria-hidden="true" class="popup popup--product">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<div class="popup-product">
+						<div class="popup-product__header header-popup">
+							<h3 class="header-popup__title">Ми повідомимо про наявність</h3>
+							<button data-close class="header-popup__close _icon-popup-cross" aria-label="close popup" type="button"></button>
+						</div>
+						<div class="popup-product__label">
+							Вкажіть свій номер телефону, для того, щоб ми могли вас повідомити
+						</div>
+						<form action="#" method="post" enctype="multipart/form-data" class="popup-product__form form-popup-product">
+							<div class="form-popup-product__input input">
+								<input required type="text" name="phone" placeholder="Телефон">
+							</div>
+							<button class="form-popup-product__button button">Надіслати</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="product-popup-sent" aria-hidden="true" class="popup popup--product">
+			<div class="popup__wrapper">
+				<div class="popup__content">
+					<div class="popup-product">
+						<div class="popup-product__header header-popup">
+							<h3 class="header-popup__title">Дякуємо!</h3>
+							<button data-close class="header-popup__close _icon-popup-cross" aria-label="close popup" type="button"></button>
+						</div>
+						<div class="popup-product__label">
+							Ми обовʼязково вас повідомимо, коли товар буде в наявності
+						</div>
+						<div class="popup-product__image">
+							<img src="img/product-page/popup.webp" alt="Image" class="ibg">
 						</div>
 					</div>
 				</div>
@@ -955,9 +994,9 @@
 			<section class="page__banners splide splide--banners">
 				<div class="splide__container">
 					<div class="splide__arrows">
-						<button class="splide__arrow splide__arrow--prev _icon-chevron-thin-left">
+						<button class="slider-arrow splide__arrow splide__arrow--prev _icon-chevron-thin-left">
 						</button>
-						<button class="splide__arrow splide__arrow--next _icon-chevron-thin-right">
+						<button class="slider-arrow splide__arrow splide__arrow--next _icon-chevron-thin-right">
 						</button>
 					</div>
 					<div class="splide__track">
@@ -2472,8 +2511,8 @@
 				<div class="feedback-section__header">
 					<h2 class="feedback-section__title section-title">Нам довіряють найкращі</h2>
 					<div data-da=".feedback-section, 549.98, last" class="feedback-section__arrows slider-arrows">
-						<button class="slider-arrows__arrow slider-arrows__arrow--prev _icon-chevron-thin-left" type="button "></button>
-						<button class="slider-arrows__arrow  slider-arrows__arrow--next _icon-chevron-thin-right" type="button "></button>
+						<button class="slider-arrow slider-arrow--prev _icon-chevron-thin-left" type="button "></button>
+						<button class="slider-arrow slider-arrow--next _icon-chevron-thin-right" type="button "></button>
 					</div>
 				</div>
 				<div class="feedback-section__scroller scroller">
@@ -2949,7 +2988,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20240917165455"></script>
+	<script src="js/app.min.js?_v=20240924152952"></script>
 </body>
 
 </html>
