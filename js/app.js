@@ -609,6 +609,7 @@
                     tabsContentItem.setAttribute("data-tabs-item", "");
                     if (tabsActiveHashBlock && index == tabsActiveHash[1]) tabsTitles[index].classList.add("_tab-active");
                     tabsContentItem.hidden = !tabsTitles[index].classList.contains("_tab-active");
+                    tabsContentItem.inert = !tabsTitles[index].classList.contains("_tab-active");
                 }));
                 const splideElement = tabsBlock.querySelector("._splide-tabs");
                 if (splideElement && splideElement.splideInstance) {
@@ -630,9 +631,15 @@
                     tabsTitles = Array.from(tabsTitles).filter((item => item.closest("[data-tabs]") === tabsBlock));
                     tabsContent.forEach(((tabsContentItem, index) => {
                         if (tabsTitles[index].classList.contains("_tab-active")) {
-                            if (tabsBlockAnimate) _slideDown(tabsContentItem, tabsBlockAnimate); else tabsContentItem.hidden = false;
+                            if (tabsBlockAnimate) _slideDown(tabsContentItem, tabsBlockAnimate); else {
+                                tabsContentItem.hidden = false;
+                                tabsContentItem.inert = false;
+                            }
                             if (isHash && !tabsContentItem.closest(".popup")) setHash(`tab-${tabsBlockIndex}-${index}`);
-                        } else if (tabsBlockAnimate) _slideUp(tabsContentItem, tabsBlockAnimate); else tabsContentItem.hidden = true;
+                        } else if (tabsBlockAnimate) _slideUp(tabsContentItem, tabsBlockAnimate); else {
+                            tabsContentItem.hidden = true;
+                            tabsContentItem.inert = true;
+                        }
                     }));
                 }
             }
@@ -664,6 +671,7 @@
                 tabsTitles.forEach(((title, i) => {
                     title.classList.toggle("_tab-active", i === index);
                     tabsContent[i].hidden = i !== index;
+                    tabsContent[i].inert = i !== index;
                 }));
             }
         }
@@ -1466,6 +1474,11 @@
                 const selectItemScroll = this.getSelectElement(selectItem, this.selectClasses.classSelectOptionsScroll).selectElement;
                 const customMaxHeightValue = +originalSelect.dataset.scroll ? `${+originalSelect.dataset.scroll}px` : ``;
                 const selectOptionsPosMargin = +originalSelect.dataset.optionsMargin ? +originalSelect.dataset.optionsMargin : 10;
+                if (originalSelect.hasAttribute("data-open-up")) {
+                    selectItem.classList.add("select--show-top");
+                    selectItemScroll.style.maxHeight = customMaxHeightValue;
+                    return;
+                }
                 if (!selectItem.classList.contains(this.selectClasses.classSelectOpen)) {
                     selectOptions.hidden = false;
                     const selectItemScrollHeight = selectItemScroll.offsetHeight ? selectItemScroll.offsetHeight : parseInt(window.getComputedStyle(selectItemScroll).getPropertyValue("max-height"));
@@ -1546,11 +1559,17 @@
                 this.getSelectElement(selectItem).originalSelect;
                 const selectInput = this.getSelectElement(selectItem, this.selectClasses.classSelectInput).selectElement;
                 const selectOptions = this.getSelectElement(selectItem, this.selectClasses.classSelectOptions).selectElement;
-                const selectOptionsItems = selectOptions.querySelectorAll(`.${this.selectClasses.classSelectOption} `);
+                const selectOptionsItems = selectOptions.querySelectorAll(`.${this.selectClasses.classSelectOption}`);
                 const _this = this;
                 selectInput.addEventListener("input", (function() {
+                    const searchTerm = selectInput.value.toUpperCase();
                     selectOptionsItems.forEach((selectOptionsItem => {
-                        if (selectOptionsItem.textContent.toUpperCase().includes(selectInput.value.toUpperCase())) selectOptionsItem.hidden = false; else selectOptionsItem.hidden = true;
+                        const optionText = selectOptionsItem.textContent.toUpperCase();
+                        if (optionText.includes(searchTerm)) {
+                            selectOptionsItem.hidden = false;
+                            const highlightedText = selectOptionsItem.textContent.replace(new RegExp(searchTerm, "gi"), (match => `<span>${match}</span>`));
+                            selectOptionsItem.innerHTML = highlightedText;
+                        } else selectOptionsItem.hidden = true;
                     }));
                     selectOptions.hidden === true ? _this.selectAction(selectItem) : null;
                 }));
@@ -5875,25 +5894,6 @@
             };
         }();
         document.addEventListener("DOMContentLoaded", (function() {
-            const newsSliders = document.querySelectorAll(".news-section__slider");
-            newsSliders.forEach((slider => {
-                new splide_esm_Splide(slider, {
-                    perPage: 3,
-                    destroy: true,
-                    arrows: false,
-                    pagination: false,
-                    gap: "1rem",
-                    breakpoints: {
-                        545.98: {
-                            destroy: false,
-                            perPage: 1,
-                            padding: {
-                                right: "15%"
-                            }
-                        }
-                    }
-                }).mount();
-            }));
             const bysinessSliders = document.querySelectorAll(".for-bysiness__slider");
             bysinessSliders.forEach((slider => {
                 new splide_esm_Splide(slider, {
@@ -5905,6 +5905,37 @@
                     breakpoints: {
                         767.98: {
                             destroy: true
+                        }
+                    }
+                }).mount();
+            }));
+            const categoriesSliders = document.querySelectorAll(".catalog__slider");
+            categoriesSliders.forEach((slider => {
+                new splide_esm_Splide(slider, {
+                    arrows: false,
+                    perPage: 6,
+                    perMove: 1,
+                    pagination: false,
+                    gap: "1rem",
+                    padding: {
+                        right: "2.5rem"
+                    },
+                    breakpoints: {
+                        1199.98: {
+                            perPage: 5
+                        },
+                        991.98: {
+                            perPage: 4
+                        },
+                        787.98: {
+                            perPage: 3
+                        },
+                        579.98: {
+                            perPage: 2,
+                            padding: {
+                                right: "1rem"
+                            },
+                            gap: "0.5rem"
                         }
                     }
                 }).mount();
@@ -5935,18 +5966,142 @@
                         }
                     }
                 };
-                if (slider.classList.contains("splide--product")) options = {
+                if (slider.classList.contains("news-section__slider")) options = {
                     ...options,
-                    pagination: true,
-                    destroy: true,
-                    focus: 0,
+                    perPage: 4,
+                    pagination: false,
+                    arrows: true,
+                    gap: "1rem",
+                    breakpoints: {
+                        991.98: {
+                            perPage: 3
+                        },
+                        767.98: {
+                            perPage: 2
+                        },
+                        545.98: {
+                            perPage: 1,
+                            padding: {
+                                right: "15%"
+                            }
+                        }
+                    }
+                };
+                if (slider.classList.contains("user-info-preview__slider")) options = {
+                    ...options,
+                    perPage: 2,
                     padding: {
-                        right: "28px"
+                        right: "9.3125rem"
                     },
                     breakpoints: {
                         ...options.breakpoints,
+                        1169.98: {
+                            perPage: 1
+                        },
+                        991.98: {
+                            perPage: 1,
+                            padding: {
+                                right: "3rem"
+                            }
+                        },
                         767.98: {
-                            destroy: false
+                            padding: 0,
+                            pagination: true
+                        }
+                    }
+                };
+                if (slider.classList.contains("user-info-preview__slider--orders")) options = {
+                    ...options,
+                    perPage: 3,
+                    padding: {
+                        right: "2.6875rem"
+                    },
+                    breakpoints: {
+                        ...options.breakpoints,
+                        1269.98: {
+                            perPage: 2
+                        },
+                        1169.98: {
+                            perPage: 2
+                        },
+                        991.98: {
+                            perPage: 1,
+                            padding: {
+                                right: "2.6875rem"
+                            }
+                        },
+                        767.98: {
+                            padding: 0,
+                            pagination: true
+                        }
+                    }
+                };
+                if (slider.classList.contains("splide--product")) options = {
+                    ...options,
+                    pagination: false,
+                    arrows: true,
+                    perPage: 4,
+                    focus: 0,
+                    breakpoints: {
+                        ...options.breakpoints,
+                        1199.98: {
+                            perPage: 3
+                        },
+                        991.98: {
+                            perPage: 2
+                        },
+                        767.98: {
+                            padding: {
+                                right: "28px"
+                            },
+                            pagination: true
+                        }
+                    }
+                };
+                if (slider.classList.contains("user-data__slider")) options = {
+                    ...options,
+                    pagination: false,
+                    arrows: false,
+                    perPage: 1,
+                    focus: 0,
+                    padding: {
+                        right: "17rem"
+                    },
+                    breakpoints: {
+                        ...options.breakpoints,
+                        991.98: {
+                            padding: {
+                                right: "9.4rem"
+                            }
+                        },
+                        767.98: {
+                            destroy: true
+                        }
+                    }
+                };
+                if (slider.classList.contains("adresses-account__slider")) options = {
+                    ...options,
+                    pagination: false,
+                    arrows: false,
+                    perPage: 2,
+                    focus: 0,
+                    drag: false,
+                    gap: "1.5rem",
+                    padding: {
+                        right: "32%"
+                    },
+                    breakpoints: {
+                        ...options.breakpoints,
+                        991.98: {
+                            padding: {
+                                right: "9.4rem"
+                            }
+                        },
+                        767.98: {
+                            perPage: 1
+                        },
+                        449.98: {
+                            destroy: true
                         }
                     }
                 };
@@ -5993,6 +6148,7 @@
                     perPage: 3,
                     focus: 0,
                     arrows: true,
+                    omitEnd: true,
                     pagination: true,
                     gap: "1.1875rem",
                     padding: {
@@ -7012,6 +7168,11 @@
             return SimpleBar;
         }(SimpleBarCore);
         if (dist_canUseDOM) SimpleBar.initHtmlApi();
+        if (document.querySelectorAll("[data-simplebar]").length) document.querySelectorAll("[data-simplebar]").forEach((scrollBlock => {
+            new SimpleBar(scrollBlock, {
+                autoHide: false
+            });
+        }));
         let addWindowScrollEvent = false;
         function pageNavigation() {
             document.addEventListener("click", pageNavigationAction);
@@ -7080,7 +7241,13 @@
                     const оbject = {};
                     оbject.element = node;
                     оbject.parent = node.parentNode;
-                    оbject.destination = document.querySelector(`${dataArray[0].trim()}`);
+                    const parentSelectorMatch = dataArray[0].trim().match(/^\{(.+)\}(?:\s*(.+)?)$/);
+                    if (parentSelectorMatch) {
+                        const parentSelector = parentSelectorMatch[1].trim();
+                        const childSelector = parentSelectorMatch[2] ? parentSelectorMatch[2].trim() : null;
+                        const parentElement = node.closest(parentSelector);
+                        if (parentElement) оbject.destination = childSelector ? parentElement.querySelector(childSelector) : parentElement;
+                    } else оbject.destination = document.querySelector(`${dataArray[0].trim()}`);
                     оbject.breakpoint = dataArray[1] ? dataArray[1].trim() : "767.98";
                     оbject.place = dataArray[2] ? dataArray[2].trim() : "last";
                     оbject.index = this.indexInParent(оbject.parent, оbject.element);
@@ -7107,6 +7274,7 @@
                 }));
             }
             moveTo(place, element, destination) {
+                if (!destination) return;
                 element.classList.add(this.daClassname);
                 if (place === "last" || place >= destination.children.length) {
                     destination.append(element);
@@ -7212,10 +7380,12 @@
             btnPlus.addEventListener("click", (function() {
                 let newValue = parseInt(input.value) + 1;
                 if (newValue <= max) input.value = newValue;
+                input.dispatchEvent(new Event("input"));
             }));
             btnMinus.addEventListener("click", (function() {
                 let newValue = parseInt(input.value) - 1;
                 if (newValue >= min) input.value = newValue;
+                input.dispatchEvent(new Event("input"));
             }));
             input.addEventListener("input", validateInput);
             input.addEventListener("blur", validateInput);
