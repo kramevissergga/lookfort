@@ -2,7 +2,7 @@
 <html lang="uk">
 
 <head>
-	<title>Авторизація</title>
+	<title>Оформлення замовлення</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
@@ -1670,105 +1670,486 @@
 			</div>
 		</header>
 		<main class="page">
-			<div class="page__breadcrumbs page__breadcrumbs--login breadcrumbs">
-				<div class="breadcrumbs__container">
-					<ul class="breadcrumbs__list">
-						<li>
-							<a href="#">Головна</a>
-						</li>
-						<li>
-							<a href="#">Одноразові стакани</a>
-						</li>
-						<li>
-							<a href="#">Паперові стакани</a>
-						</li>
-						<li>
-							<span>Гофрований стакан паперовий 110мл білий WAVE</span>
-						</li>
-					</ul>
-				</div>
-			</div>
-			<section class="page__login login-section">
-				<div class="login-section__container">
-					<div class="login-section__sing-in sign-in">
-						<h2 class="sign-in__title section-title">
-							Вхід
-						</h2>
-						<div data-tabs class="sign-in__tabs tabs-sign-in">
-							<nav data-tabs-titles class="tabs-sign-in__navigation">
-								<button type="button" class="tabs-sign-in__title _tab-active">За номером телефону</button>
-								<button type="button" class="tabs-sign-in__title">Через пошту</button>
-							</nav>
-							<div data-tabs-body class="tabs-sign-in__content">
-								<div class="tabs-sign-in__body">
-									<form action="#" method="post" enctype="multipart/form-data" class="tabs-sign-in__form form-login">
-										<div class="form-login__block">
-											<label class="form-login__label">
-												Телефон
-											</label>
-											<div class="form-login__input input"><input type="text" placeholder="Телефон"></div>
-										</div>
-										<button class="form-login__button button">Отримати код</button>
-									</form>
+			<section class="page__checkout checkout">
+				<div class="checkout__container">
+					<h1 class="checkout__title section-title">Оформити замовлення</h1>
+					<div class="checkout__body">
+						<div class="checkout__main">
+							<div class="checkout__block block-checkout">
+								<div class="block-checkout__header">
+									<h2 class="block-checkout__title">
+										Дані отримувача
+									</h2>
+									<button data-popup="#login-popup" class="block-checkout__button button">Увійти</button>
 								</div>
-								<div class="tabs-sign-in__body">
-									<form action="#" method="post" enctype="multipart/form-data" class="tabs-sign-in__form form-login">
-										<div class="form-login__block">
-											<label class="form-login__label">
-												Пошта
-											</label>
-											<div class="form-login__input input"><input type="text" placeholder="Телефон"></div>
+								<div class="block-checkout__body">
+									<div class="block-checkout__fields fields-checkout">
+										<div class="fields-checkout__label">
+											ФІз. особа
 										</div>
-										<button class="form-login__button button">Отримати код</button>
-									</form>
+										<div class="fields-checkout__items">
+											<div class="fields-checkout__input input input--label">
+												<div class="input__label">Імʼя<span>*</span></div>
+												<input placeholder="" type="text">
+											</div>
+											<div class="fields-checkout__input input input--label">
+												<div class="input__label">Призвіще<span>*</span></div>
+												<input placeholder="" type="text">
+											</div>
+											<div class="fields-checkout__input input input--label">
+												<div class="input__label">Телефон<span>*</span></div>
+												<input placeholder="" type="text">
+											</div>
+											<div class="fields-checkout__input input input--label">
+												<div class="input__label">E-mail<span>*</span></div>
+												<input placeholder="" type="text">
+											</div>
+										</div>
+									</div>
+									<div class="block-checkout__fields fields-checkout">
+										<div class="fields-checkout__label">
+											Юр. Компанія (Не обов’язково)
+										</div>
+										<div class="fields-checkout__items">
+											<div class="fields-checkout__input input input--label">
+												<div class="input__label">Код ЄДРПОУ</div>
+												<input placeholder="" type="text">
+											</div>
+											<div class="fields-checkout__input input input--label">
+												<div class="input__label">Назва компанії / Закладу</div>
+												<input placeholder="" type="text">
+											</div>
+											<div class="fields-checkout__input input input--label">
+												<div class="input__label">Повний ПІБ одержувача</div>
+												<input placeholder="" type="text">
+											</div>
+											<div class="fields-checkout__input input input--label">
+												<div class="input__label">Телефон одержувача</div>
+												<input placeholder="" type="text">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div data-da=".checkout__main, 767.98, first" class="checkout__block block-checkout block-checkout--products">
+								<div class="block-checkout__header">
+									<h2 class="block-checkout__title">
+										Ваші товари
+									</h2>
+									<div class="block-checkout__label">12 позицій</div>
+								</div>
+								<div class="block-checkout__body">
+									<div data-simplebar class="block-checkout__products">
+										<div class="block-checkout__product item-cart">
+											<div class="item-cart__body">
+												<a href="#" class="item-cart__image-link">
+													<img src="img/products/01.webp" alt="Image" class="ibg">
+												</a>
+												<div class="item-cart__content">
+													<div class="item-cart__id">00-00000933</div>
+													<h3 class="item-cart__title">
+														<a href="#" class="item-cart__link">Гофрований стакан паперовий 110мл білий WAVE</a>
+													</h3>
+													<div data-da="{.item-cart} .item-cart__total, 529.98, first" class="item-cart__price">
+														2.68₴ / 1шт
+														<span>5.49₴ / 1шт</span>
+													</div>
+												</div>
+												<div data-da="{.item-cart}, 529.98, last" class="item-cart__count">
+													<div class="item-cart__total">
+														<div class="item-cart__summary">Сума: <span>7 585 грн</span></div>
+													</div>
+													<div data-min="1" data-max="999" class="counter counter--green">
+														<button class="counter__btn counter__btn--decrement" type="button"></button>
+														<input type="number" value="500">
+														<button class="counter__btn counter__btn--increment" type="button"></button>
+													</div>
+												</div>
+												<div class="item-cart__actions">
+													<button class="item-cart__button _icon-delete"></button>
+													<button class="item-cart__button item-cart__button--favorite _icon-heart"></button>
+												</div>
+											</div>
+										</div>
+										<div class="block-checkout__product item-cart">
+											<div class="item-cart__body">
+												<a href="#" class="item-cart__image-link">
+													<img src="img/products/01.webp" alt="Image" class="ibg">
+												</a>
+												<div class="item-cart__content">
+													<div class="item-cart__id">00-00000933</div>
+													<h3 class="item-cart__title">
+														<a href="#" class="item-cart__link">Гофрований стакан паперовий 110мл білий WAVE</a>
+													</h3>
+													<div data-da="{.item-cart} .item-cart__total, 529.98, first" class="item-cart__price">
+														2.68₴ / 1шт
+														<span>5.49₴ / 1шт</span>
+													</div>
+												</div>
+												<div data-da="{.item-cart}, 529.98, last" class="item-cart__count">
+													<div class="item-cart__total">
+														<div class="item-cart__summary">Сума: <span>7 585 грн</span></div>
+													</div>
+													<div data-min="1" data-max="999" class="counter counter--green">
+														<button class="counter__btn counter__btn--decrement" type="button"></button>
+														<input type="number" value="500">
+														<button class="counter__btn counter__btn--increment" type="button"></button>
+													</div>
+												</div>
+												<div class="item-cart__actions">
+													<button class="item-cart__button _icon-delete"></button>
+													<button class="item-cart__button item-cart__button--favorite _icon-heart"></button>
+												</div>
+											</div>
+										</div>
+										<div class="block-checkout__product item-cart">
+											<div class="item-cart__body">
+												<a href="#" class="item-cart__image-link">
+													<img src="img/products/01.webp" alt="Image" class="ibg">
+												</a>
+												<div class="item-cart__content">
+													<div class="item-cart__id">00-00000933</div>
+													<h3 class="item-cart__title">
+														<a href="#" class="item-cart__link">Гофрований стакан паперовий 110мл білий WAVE</a>
+													</h3>
+													<div data-da="{.item-cart} .item-cart__total, 529.98, first" class="item-cart__price">
+														2.68₴ / 1шт
+														<span>5.49₴ / 1шт</span>
+													</div>
+												</div>
+												<div data-da="{.item-cart}, 529.98, last" class="item-cart__count">
+													<div class="item-cart__total">
+														<div class="item-cart__summary">Сума: <span>7 585 грн</span></div>
+													</div>
+													<div data-min="1" data-max="999" class="counter counter--green">
+														<button class="counter__btn counter__btn--decrement" type="button"></button>
+														<input type="number" value="500">
+														<button class="counter__btn counter__btn--increment" type="button"></button>
+													</div>
+												</div>
+												<div class="item-cart__actions">
+													<button class="item-cart__button _icon-delete"></button>
+													<button class="item-cart__button item-cart__button--favorite _icon-heart"></button>
+												</div>
+											</div>
+										</div>
+										<div class="block-checkout__product item-cart">
+											<div class="item-cart__body">
+												<a href="#" class="item-cart__image-link">
+													<img src="img/products/01.webp" alt="Image" class="ibg">
+												</a>
+												<div class="item-cart__content">
+													<div class="item-cart__id">00-00000933</div>
+													<h3 class="item-cart__title">
+														<a href="#" class="item-cart__link">Гофрований стакан паперовий 110мл білий WAVE</a>
+													</h3>
+													<div data-da="{.item-cart} .item-cart__total, 529.98, first" class="item-cart__price">
+														2.68₴ / 1шт
+														<span>5.49₴ / 1шт</span>
+													</div>
+												</div>
+												<div data-da="{.item-cart}, 529.98, last" class="item-cart__count">
+													<div class="item-cart__total">
+														<div class="item-cart__summary">Сума: <span>7 585 грн</span></div>
+													</div>
+													<div data-min="1" data-max="999" class="counter counter--green">
+														<button class="counter__btn counter__btn--decrement" type="button"></button>
+														<input type="number" value="500">
+														<button class="counter__btn counter__btn--increment" type="button"></button>
+													</div>
+												</div>
+												<div class="item-cart__actions">
+													<button class="item-cart__button _icon-delete"></button>
+													<button class="item-cart__button item-cart__button--favorite _icon-heart"></button>
+												</div>
+											</div>
+										</div>
+										<div class="block-checkout__product item-cart">
+											<div class="item-cart__body">
+												<a href="#" class="item-cart__image-link">
+													<img src="img/products/01.webp" alt="Image" class="ibg">
+												</a>
+												<div class="item-cart__content">
+													<div class="item-cart__id">00-00000933</div>
+													<h3 class="item-cart__title">
+														<a href="#" class="item-cart__link">Гофрований стакан паперовий 110мл білий WAVE</a>
+													</h3>
+													<div data-da="{.item-cart} .item-cart__total, 529.98, first" class="item-cart__price">
+														2.68₴ / 1шт
+														<span>5.49₴ / 1шт</span>
+													</div>
+												</div>
+												<div data-da="{.item-cart}, 529.98, last" class="item-cart__count">
+													<div class="item-cart__total">
+														<div class="item-cart__summary">Сума: <span>7 585 грн</span></div>
+													</div>
+													<div data-min="1" data-max="999" class="counter counter--green">
+														<button class="counter__btn counter__btn--decrement" type="button"></button>
+														<input type="number" value="500">
+														<button class="counter__btn counter__btn--increment" type="button"></button>
+													</div>
+												</div>
+												<div class="item-cart__actions">
+													<button class="item-cart__button _icon-delete"></button>
+													<button class="item-cart__button item-cart__button--favorite _icon-heart"></button>
+												</div>
+											</div>
+										</div>
+										<div class="block-checkout__product item-cart">
+											<div class="item-cart__body">
+												<a href="#" class="item-cart__image-link">
+													<img src="img/products/01.webp" alt="Image" class="ibg">
+												</a>
+												<div class="item-cart__content">
+													<div class="item-cart__id">00-00000933</div>
+													<h3 class="item-cart__title">
+														<a href="#" class="item-cart__link">Гофрований стакан паперовий 110мл білий WAVE</a>
+													</h3>
+													<div data-da="{.item-cart} .item-cart__total, 529.98, first" class="item-cart__price">
+														2.68₴ / 1шт
+														<span>5.49₴ / 1шт</span>
+													</div>
+												</div>
+												<div data-da="{.item-cart}, 529.98, last" class="item-cart__count">
+													<div class="item-cart__total">
+														<div class="item-cart__summary">Сума: <span>7 585 грн</span></div>
+													</div>
+													<div data-min="1" data-max="999" class="counter counter--green">
+														<button class="counter__btn counter__btn--decrement" type="button"></button>
+														<input type="number" value="500">
+														<button class="counter__btn counter__btn--increment" type="button"></button>
+													</div>
+												</div>
+												<div class="item-cart__actions">
+													<button class="item-cart__button _icon-delete"></button>
+													<button class="item-cart__button item-cart__button--favorite _icon-heart"></button>
+												</div>
+											</div>
+										</div>
+										<div class="block-checkout__product item-cart">
+											<div class="item-cart__body">
+												<a href="#" class="item-cart__image-link">
+													<img src="img/products/01.webp" alt="Image" class="ibg">
+												</a>
+												<div class="item-cart__content">
+													<div class="item-cart__id">00-00000933</div>
+													<h3 class="item-cart__title">
+														<a href="#" class="item-cart__link">Гофрований стакан паперовий 110мл білий WAVE</a>
+													</h3>
+													<div data-da="{.item-cart} .item-cart__total, 529.98, first" class="item-cart__price">
+														2.68₴ / 1шт
+														<span>5.49₴ / 1шт</span>
+													</div>
+												</div>
+												<div data-da="{.item-cart}, 529.98, last" class="item-cart__count">
+													<div class="item-cart__total">
+														<div class="item-cart__summary">Сума: <span>7 585 грн</span></div>
+													</div>
+													<div data-min="1" data-max="999" class="counter counter--green">
+														<button class="counter__btn counter__btn--decrement" type="button"></button>
+														<input type="number" value="500">
+														<button class="counter__btn counter__btn--increment" type="button"></button>
+													</div>
+												</div>
+												<div class="item-cart__actions">
+													<button class="item-cart__button _icon-delete"></button>
+													<button class="item-cart__button item-cart__button--favorite _icon-heart"></button>
+												</div>
+											</div>
+										</div>
+										<div class="block-checkout__product item-cart">
+											<div class="item-cart__body">
+												<a href="#" class="item-cart__image-link">
+													<img src="img/products/01.webp" alt="Image" class="ibg">
+												</a>
+												<div class="item-cart__content">
+													<div class="item-cart__id">00-00000933</div>
+													<h3 class="item-cart__title">
+														<a href="#" class="item-cart__link">Гофрований стакан паперовий 110мл білий WAVE</a>
+													</h3>
+													<div data-da="{.item-cart} .item-cart__total, 529.98, first" class="item-cart__price">
+														2.68₴ / 1шт
+														<span>5.49₴ / 1шт</span>
+													</div>
+												</div>
+												<div data-da="{.item-cart}, 529.98, last" class="item-cart__count">
+													<div class="item-cart__total">
+														<div class="item-cart__summary">Сума: <span>7 585 грн</span></div>
+													</div>
+													<div data-min="1" data-max="999" class="counter counter--green">
+														<button class="counter__btn counter__btn--decrement" type="button"></button>
+														<input type="number" value="500">
+														<button class="counter__btn counter__btn--increment" type="button"></button>
+													</div>
+												</div>
+												<div class="item-cart__actions">
+													<button class="item-cart__button _icon-delete"></button>
+													<button class="item-cart__button item-cart__button--favorite _icon-heart"></button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="checkout__block block-checkout">
+								<div class="block-checkout__header">
+									<h2 class="block-checkout__title">
+										Доставка
+									</h2>
+									<select name="form[]" data-scroll data-class-modif="checkout">
+										<option value="" selected>Оберіть місто</option>
+										<option value="1">Львів</option>
+										<option value="2">Луцьк</option>
+										<option value="3">Івано-Франківськ</option>
+										<option value="4">Хмельницький</option>
+									</select>
+								</div>
+								<div class="block-checkout__body">
+									<div class="block-checkout__shipping shipping-checkout">
+										<div class="shipping-checkout__block">
+											<label class="shipping-checkout__radio radio-checkout">
+												<input type="radio" name="shipping">
+												<div class="radio-checkout__icon"></div>
+												<div class="radio-checkout__label">
+													<div class="radio-checkout__image">
+														<img src="img/checkout/np.svg" alt="Icon" class="ibg ibg--contain">
+													</div>
+													<div class="radio-checkout__content">
+														Нова пошта у відділення
+													</div>
+												</div>
+												<div data-da="{.radio-checkout} .radio-checkout__content, 767.98, last" class="radio-checkout__price">Безкоштовно</div>
+											</label>
+											<select name="form[]" data-pseudo-label="Відділення отримувача" data-scroll="99" data-class-modif="label">
+												<option selected value="1">Відділення №4 (до 30 кг): вул. Дем'яна Назва, 9</option>
+												<option value="2">Відділення №4 (до 30 кг): вул. Дем'яна Назва, 9</option>
+												<option value="3">Відділення №4 (до 30 кг): вул. Дем'яна Назва, 9</option>
+												<option value="4">Відділення №4 (до 30 кг): вул. Дем'яна Назва, 9</option>
+											</select>
+											<label class="shipping-checkout__radio radio-checkout">
+												<input type="radio" name="shipping">
+												<div class="radio-checkout__icon"></div>
+												<div class="radio-checkout__label">
+													<div class="radio-checkout__image">
+														<img src="img/checkout/np.svg" alt="Icon" class="ibg ibg--contain">
+													</div>
+													<div class="radio-checkout__content">
+														Нова пошта Кур’єром
+													</div>
+
+												</div>
+												<div data-da="{.radio-checkout} .radio-checkout__content, 767.98, last" class="radio-checkout__price">Безкоштовно</div>
+											</label>
+											<label class="shipping-checkout__radio radio-checkout">
+												<input type="radio" name="shipping">
+												<div class="radio-checkout__icon"></div>
+												<div class="radio-checkout__label">
+													<div class="radio-checkout__image">
+														<img src="img/checkout/box.svg" alt="Icon" class="ibg ibg--contain">
+													</div>
+													<div class="radio-checkout__content">
+														Доставка по Хмельницькому
+													</div>
+												</div>
+												<div data-da="{.radio-checkout} .radio-checkout__content, 767.98, last" class="radio-checkout__price">Безкоштовно</div>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="checkout__block block-checkout">
+								<div class="block-checkout__header">
+									<h2 class="block-checkout__title">
+										Оплата
+									</h2>
+								</div>
+								<div class="block-checkout__body">
+									<div class="block-checkout__shipping shipping-checkout">
+										<div class="shipping-checkout__block">
+											<label class="shipping-checkout__radio radio-checkout">
+												<input type="radio" name="payment">
+												<div class="radio-checkout__icon"></div>
+												<div class="radio-checkout__label">
+													<div class="radio-checkout__content">
+														На розрахунковий рахунок
+													</div>
+												</div>
+											</label>
+											<label class="shipping-checkout__radio radio-checkout">
+												<input type="radio" name="payment">
+												<div class="radio-checkout__icon"></div>
+												<div class="radio-checkout__label">
+													<div class="radio-checkout__content">
+														Онлайн оплата
+													</div>
+												</div>
+											</label>
+											<label class="shipping-checkout__radio radio-checkout">
+												<input type="radio" name="payment">
+												<div class="radio-checkout__icon"></div>
+												<div class="radio-checkout__label">
+													<div class="radio-checkout__content">
+														Безготівковий розрахунок <span>(юр. особа)</span>
+													</div>
+												</div>
+												<a href="#" data-da="{.radio-checkout} .radio-checkout__content, 767.98, last" class="radio-checkout__link _icon-pin"><span>Прикріпити файл з
+														реквізитами</span></a>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="checkout__block block-checkout">
+								<div class="block-checkout__header">
+									<h2 class="block-checkout__title">
+										Коментар
+									</h2>
+								</div>
+								<div class="block-checkout__body">
+									<textarea class="block-checkout__textarea textarea" placeholder="Текст коментаря до замовлення"></textarea>
 								</div>
 							</div>
 						</div>
-					</div>
-					<div class="login-section__sing-up sign-up">
-						<h2 class="sign-up__title section-title">
-							Реєстрація
-						</h2>
-						<a href="#" class="sign-up__link button button--border">
-							<svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
-								<path d="M23.0015 12.2331C23.0015 11.3698 22.93 10.7398 22.7753 10.0864H12.7158V13.983H18.6205C18.5015 14.9514 17.8587 16.4097 16.4301 17.3897L16.41 17.5202L19.5907 19.9349L19.811 19.9564C21.8348 18.1247 23.0015 15.4297 23.0015 12.2331Z" fill="#4285F4" />
-								<path d="M12.715 22.5001C15.6078 22.5001 18.0363 21.5667 19.8102 19.9567L16.4292 17.39C15.5245 18.0083 14.3102 18.44 12.715 18.44C9.88167 18.44 7.47693 16.6083 6.61971 14.0767L6.49406 14.0871L3.18681 16.5955L3.14355 16.7133C4.90543 20.1433 8.52448 22.5001 12.715 22.5001Z" fill="#34A853" />
-								<path d="M6.61997 14.0767C6.39379 13.4234 6.26289 12.7233 6.26289 12C6.26289 11.2767 6.39379 10.5767 6.60807 9.92337L6.60208 9.78423L3.25337 7.2356L3.14381 7.28667C2.41765 8.71002 2.00098 10.3084 2.00098 12C2.00098 13.6917 2.41765 15.29 3.14381 16.7133L6.61997 14.0767Z" fill="#FBBC05" />
-								<path d="M12.715 5.55997C14.7269 5.55997 16.084 6.41163 16.8579 7.12335L19.8817 4.23C18.0246 2.53834 15.6078 1.5 12.715 1.5C8.52451 1.5 4.90544 3.85665 3.14355 7.28662L6.60783 9.92332C7.47696 7.39166 9.88171 5.55997 12.715 5.55997Z" fill="#EB4335" />
-							</svg>
-							Увійти
-						</a>
-						<form action="#" method="post" enctype="multipart/form-data" class="tabs-sign-up__form form-login">
-							<div class="form-login__block">
-								<label class="form-login__label">
-									ПІБ
-								</label>
-								<div class="form-login__input input"><input type="text" placeholder="Прізвище Ім’я По-батькові"></div>
-							</div>
-							<div class="form-login__block">
-								<label class="form-login__label">
-									Телефон
-								</label>
-								<div class="form-login__input input"><input type="text" placeholder="Телефон"></div>
-							</div>
-							<div class="form-login__block">
-								<label class="form-login__label">
-									Email
-								</label>
-								<div class="form-login__input input"><input type="email" placeholder="Ваша пошта"></div>
-							</div>
-							<div class="form-login__block">
-								<label class="form-login__label">
-									Пароль
-								</label>
-								<div class="form-login__input input">
-									<input type="text" placeholder="Пароль 6 символів">
+						<div class="checkout__aside aside-checkout">
+							<h2 class="aside-checkout__title">
+								Разом
+							</h2>
+							<div class="aside-checkout__body">
+								<a href="#" class="aside-checkout__link">ВИКОРИСТАТИ ПРОМОКОД</a>
+								<dl class="aside-checkout__list">
+									<div>
+										<dt>Сума</dt>
+										<dd>3 096 грн</dd>
+									</div>
+									<div>
+										<dt>Зекономлено на доставці</dt>
+										<dd>-31 грн</dd>
+									</div>
+									<div>
+										<dt>Кількість товарів</dt>
+										<dd>12 штук</dd>
+									</div>
+								</dl>
+								<div class="aside-checkout__info _icon-info">
+									На період військових дій відвантаження здійснюється за повною передоплатою
 								</div>
 							</div>
-							<button class="form-login__button button">Отримати код</button>
-							<div class="form-login__text">Реєструючись, я погоджуюсь з <a href="#">Правилами угоди користувача</a>
+							<div class="aside-checkout__footer">
+								<div class="aside-checkout__summary">
+									До сплати
+									<div class="aside-checkout__price">
+										3 096 грн
+										<span>4 650 ₴</span>
+									</div>
+								</div>
+								<button class="aside-checkout__button button">
+									Оформити замовлення
+								</button>
+								<div class="aside-checkout__label">
+									Підтверджуючи замовлення, я погоджуюсь з <a href="#">Правилами угоди користувача</a>
+								</div>
 							</div>
-						</form>
+						</div>
 					</div>
 				</div>
 			</section>

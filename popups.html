@@ -2,7 +2,7 @@
 <html lang="uk">
 
 <head>
-	<title>Авторизація</title>
+	<title>Попапи</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
@@ -1670,108 +1670,44 @@
 			</div>
 		</header>
 		<main class="page">
-			<div class="page__breadcrumbs page__breadcrumbs--login breadcrumbs">
-				<div class="breadcrumbs__container">
-					<ul class="breadcrumbs__list">
-						<li>
-							<a href="#">Головна</a>
-						</li>
-						<li>
-							<a href="#">Одноразові стакани</a>
-						</li>
-						<li>
-							<a href="#">Паперові стакани</a>
-						</li>
-						<li>
-							<span>Гофрований стакан паперовий 110мл білий WAVE</span>
-						</li>
-					</ul>
-				</div>
-			</div>
-			<section class="page__login login-section">
-				<div class="login-section__container">
-					<div class="login-section__sing-in sign-in">
-						<h2 class="sign-in__title section-title">
-							Вхід
-						</h2>
-						<div data-tabs class="sign-in__tabs tabs-sign-in">
-							<nav data-tabs-titles class="tabs-sign-in__navigation">
-								<button type="button" class="tabs-sign-in__title _tab-active">За номером телефону</button>
-								<button type="button" class="tabs-sign-in__title">Через пошту</button>
-							</nav>
-							<div data-tabs-body class="tabs-sign-in__content">
-								<div class="tabs-sign-in__body">
-									<form action="#" method="post" enctype="multipart/form-data" class="tabs-sign-in__form form-login">
-										<div class="form-login__block">
-											<label class="form-login__label">
-												Телефон
-											</label>
-											<div class="form-login__input input"><input type="text" placeholder="Телефон"></div>
-										</div>
-										<button class="form-login__button button">Отримати код</button>
-									</form>
-								</div>
-								<div class="tabs-sign-in__body">
-									<form action="#" method="post" enctype="multipart/form-data" class="tabs-sign-in__form form-login">
-										<div class="form-login__block">
-											<label class="form-login__label">
-												Пошта
-											</label>
-											<div class="form-login__input input"><input type="text" placeholder="Телефон"></div>
-										</div>
-										<button class="form-login__button button">Отримати код</button>
-									</form>
-								</div>
-							</div>
+			<div class="page__popups popups">
+				<div class="popups__container">
+					<div style="margin-bottom: 2rem;" class="popups__block">
+						<h2 class="popups__title section-title section-title--margin">Хедер</h2>
+						<div style="display: flex; gap: 0.7rem; flex-wrap: wrap;" class="popups__items">
+							<button class="button" data-popup="#price-popup">Прайс</button>
+							<button class="button" data-popup="#samples-popup">Зразки</button>
 						</div>
 					</div>
-					<div class="login-section__sing-up sign-up">
-						<h2 class="sign-up__title section-title">
-							Реєстрація
-						</h2>
-						<a href="#" class="sign-up__link button button--border">
-							<svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
-								<path d="M23.0015 12.2331C23.0015 11.3698 22.93 10.7398 22.7753 10.0864H12.7158V13.983H18.6205C18.5015 14.9514 17.8587 16.4097 16.4301 17.3897L16.41 17.5202L19.5907 19.9349L19.811 19.9564C21.8348 18.1247 23.0015 15.4297 23.0015 12.2331Z" fill="#4285F4" />
-								<path d="M12.715 22.5001C15.6078 22.5001 18.0363 21.5667 19.8102 19.9567L16.4292 17.39C15.5245 18.0083 14.3102 18.44 12.715 18.44C9.88167 18.44 7.47693 16.6083 6.61971 14.0767L6.49406 14.0871L3.18681 16.5955L3.14355 16.7133C4.90543 20.1433 8.52448 22.5001 12.715 22.5001Z" fill="#34A853" />
-								<path d="M6.61997 14.0767C6.39379 13.4234 6.26289 12.7233 6.26289 12C6.26289 11.2767 6.39379 10.5767 6.60807 9.92337L6.60208 9.78423L3.25337 7.2356L3.14381 7.28667C2.41765 8.71002 2.00098 10.3084 2.00098 12C2.00098 13.6917 2.41765 15.29 3.14381 16.7133L6.61997 14.0767Z" fill="#FBBC05" />
-								<path d="M12.715 5.55997C14.7269 5.55997 16.084 6.41163 16.8579 7.12335L19.8817 4.23C18.0246 2.53834 15.6078 1.5 12.715 1.5C8.52451 1.5 4.90544 3.85665 3.14355 7.28662L6.60783 9.92332C7.47696 7.39166 9.88171 5.55997 12.715 5.55997Z" fill="#EB4335" />
-							</svg>
-							Увійти
-						</a>
-						<form action="#" method="post" enctype="multipart/form-data" class="tabs-sign-up__form form-login">
-							<div class="form-login__block">
-								<label class="form-login__label">
-									ПІБ
-								</label>
-								<div class="form-login__input input"><input type="text" placeholder="Прізвище Ім’я По-батькові"></div>
-							</div>
-							<div class="form-login__block">
-								<label class="form-login__label">
-									Телефон
-								</label>
-								<div class="form-login__input input"><input type="text" placeholder="Телефон"></div>
-							</div>
-							<div class="form-login__block">
-								<label class="form-login__label">
-									Email
-								</label>
-								<div class="form-login__input input"><input type="email" placeholder="Ваша пошта"></div>
-							</div>
-							<div class="form-login__block">
-								<label class="form-login__label">
-									Пароль
-								</label>
-								<div class="form-login__input input">
-									<input type="text" placeholder="Пароль 6 символів">
-								</div>
-							</div>
-							<button class="form-login__button button">Отримати код</button>
-							<div class="form-login__text">Реєструючись, я погоджуюсь з <a href="#">Правилами угоди користувача</a>
-							</div>
-						</form>
+					<div style="margin-bottom: 2rem;" class="popups__block">
+						<h2 class="popups__title section-title section-title--margin">Товар</h2>
+						<div style="display: flex; gap: 0.7rem; flex-wrap: wrap;" class="popups__items">
+							<button class="button" data-popup="#product-popup-sent">Дякуємо</button>
+						</div>
+					</div>
+					<div style="margin-bottom: 2rem;" class="popups__block">
+						<h2 class="popups__title section-title section-title--margin">Акаунт</h2>
+						<div style="display: flex; gap: 0.7rem; flex-wrap: wrap;" class="popups__items">
+							<button class="button" data-popup="#new-phone-popup">Додати номер телефону</button>
+							<button class="button" data-popup="#change-phone-popup">Змінити номер телефону</button>
+							<button class="button" data-popup="#changed-phone-popup">Номер телефону змінено</button>
+							<button class="button" data-popup="#add-profile-popup">Додати юр. особу</button>
+							<button class="button" data-popup="#added-profile-popup">Юр. особу додано</button>
+							<button class="button" data-popup="#adress-type-popup">Тип адреси</button>
+							<button class="button" data-popup="#adress-delete-popup">Видалити адресу</button>
+
+						</div>
+					</div>
+					<div style="margin-bottom: 2rem;" class="popups__block">
+						<h2 class="popups__title section-title section-title--margin">Інші</h2>
+						<div style="display: flex; gap: 0.7rem; flex-wrap: wrap;" class="popups__items">
+							<button class="button" data-popup="#lang-popup">Лагідна українізація</button>
+							<button class="button" data-popup="#cookies-popup">Попередження щодо cookies</button>
+							<button class="button" data-popup="#login-popup">Логін</button>
+						</div>
 					</div>
 				</div>
-			</section>
+			</div>
 		</main>
 		<footer class="footer">
 			<div class="footer__container">
