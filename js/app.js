@@ -756,21 +756,22 @@
                 }
                 function initItem(showMoreBlock, matchMedia = false) {
                     showMoreBlock = matchMedia ? showMoreBlock.item : showMoreBlock;
+                    const tabsParent = showMoreBlock.closest("[data-tabs]");
+                    if (tabsParent && !tabsParent.hasListener) {
+                        tabsParent.addEventListener("tabSwitch", (function() {
+                            var showMoreContent = showMoreBlock.querySelector("[data-showmore-content]");
+                            if (showMoreContent && showMoreContent.hidden) showMoreContent.hidden = false;
+                            showMoreActions({
+                                type: "resize"
+                            });
+                        }));
+                        tabsParent.hasListener = true;
+                    }
                     let showMoreContent = showMoreBlock.querySelectorAll("[data-showmore-content]");
                     let showMoreButton = showMoreBlock.querySelectorAll("[data-showmore-button]");
                     showMoreContent = Array.from(showMoreContent).filter((item => item.closest("[data-showmore]") === showMoreBlock))[0];
                     showMoreButton = Array.from(showMoreButton).filter((item => item.closest("[data-showmore]") === showMoreBlock))[0];
                     const hiddenHeight = getHeight(showMoreBlock, showMoreContent);
-                    const parentTabsBlock = showMoreBlock.closest("[data-tabs]");
-                    if (parentTabsBlock) parentTabsBlock.addEventListener("tabSwitch", (function() {
-                        initItem(showMoreBlock);
-                    }));
-                    const showMoreTypeValue = showMoreContent.dataset.showmoreContent ? parseInt(showMoreContent.dataset.showmoreContent) : 3;
-                    const showMoreItems = showMoreContent.children;
-                    if (showMoreItems.length <= showMoreTypeValue) {
-                        showMoreButton.hidden = true;
-                        return;
-                    } else showMoreButton.hidden = false;
                     if (matchMedia.matches || !matchMedia) if (hiddenHeight < getOriginalHeight(showMoreContent)) {
                         _slideUp(showMoreContent, 0, showMoreBlock.classList.contains("_showmore-active") ? getOriginalHeight(showMoreContent) : hiddenHeight);
                         showMoreButton.hidden = false;
@@ -992,6 +993,51 @@
                 return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(formRequiredItem.value);
             }
         };
+        function formRating() {
+            const ratings = document.querySelectorAll("[data-rating]");
+            if (ratings) ratings.forEach((rating => {
+                const ratingValue = +rating.dataset.ratingValue;
+                const ratingSize = +rating.dataset.ratingSize ? +rating.dataset.ratingSize : 5;
+                formRatingInit(rating, ratingSize);
+                ratingValue ? formRatingSet(rating, ratingValue) : null;
+                document.addEventListener("click", formRatingAction);
+            }));
+            function formRatingAction(e) {
+                const targetElement = e.target;
+                if (targetElement.closest(".rating__input")) {
+                    const currentElement = targetElement.closest(".rating__input");
+                    const ratingValue = +currentElement.value;
+                    const rating = currentElement.closest(".rating");
+                    const ratingSet = rating.dataset.rating === "set";
+                    ratingSet ? formRatingGet(rating, ratingValue) : null;
+                }
+            }
+            function formRatingInit(rating, ratingSize) {
+                let ratingItems = ``;
+                for (let index = 0; index < ratingSize; index++) {
+                    index === 0 ? ratingItems += `<div class="rating__items">` : null;
+                    ratingItems += `\n\t\t\t\t<label class="rating__item">\n\t\t\t\t\t<input class="rating__input" type="radio" name="rating" value="${index + 1}">\n\t\t\t\t</label>`;
+                    index === ratingSize ? ratingItems += `</div">` : null;
+                }
+                rating.insertAdjacentHTML("beforeend", ratingItems);
+            }
+            function formRatingGet(rating, ratingValue) {
+                const resultRating = ratingValue;
+                formRatingSet(rating, resultRating);
+            }
+            function formRatingSet(rating, value) {
+                const ratingItems = rating.querySelectorAll(".rating__item");
+                const resultFullItems = parseInt(value);
+                const resultPartItem = value - resultFullItems;
+                rating.hasAttribute("data-rating-title") ? rating.title = value : null;
+                ratingItems.forEach(((ratingItem, index) => {
+                    ratingItem.classList.remove("rating__item--active");
+                    ratingItem.querySelector("span") ? ratingItems[index].querySelector("span").remove() : null;
+                    if (index <= resultFullItems - 1) ratingItem.classList.add("rating__item--active");
+                    if (index === resultFullItems && resultPartItem) ratingItem.insertAdjacentHTML("beforeend", `<span style="width:${resultPartItem * 100}%"></span>`);
+                }));
+            }
+        }
         class SelectConstructor {
             constructor(props, data = null) {
                 let defaultConfig = {
@@ -1222,7 +1268,7 @@
                 if (selectOptions.length > 0) {
                     let selectOptionsHTML = ``;
                     if (this.getSelectPlaceholder(originalSelect) && !this.getSelectPlaceholder(originalSelect).show || originalSelect.multiple) selectOptions = selectOptions.filter((option => option.value));
-                    selectOptionsHTML += `<div ${selectOptionsScroll} ${selectOptionsScroll ? `style="max-height: ${customMaxHeightValue}px"` : ""} class="${this.selectClasses.classSelectOptionsScroll}">`;
+                    selectOptionsHTML += `<div ${selectOptionsScroll} ${selectOptionsScroll ? `style="height: ${customMaxHeightValue}px"` : ""} class="${this.selectClasses.classSelectOptionsScroll}">`;
                     selectOptions.forEach((selectOption => {
                         selectOptionsHTML += this.getOption(selectOption, originalSelect);
                     }));
@@ -1386,7 +1432,7 @@
                     bodyLock: true,
                     hashSettings: {
                         location: false,
-                        goHash: false
+                        goHash: true
                     },
                     on: {
                         beforeOpen: function() {},
@@ -5917,6 +5963,14 @@
                 return html;
             };
         }();
+        function updateDigitPagination(splideInstance, container) {
+            const currentEl = container.querySelector(".digit-pagination__current");
+            const totalEl = container.querySelector(".digit-pagination__total");
+            if (currentEl && totalEl) {
+                currentEl.textContent = splideInstance.index + 1;
+                totalEl.textContent = splideInstance.length;
+            }
+        }
         document.addEventListener("DOMContentLoaded", (function() {
             const bysinessSliders = document.querySelectorAll(".for-bysiness__slider");
             bysinessSliders.forEach((slider => {
@@ -6157,6 +6211,47 @@
                         }
                     }
                 };
+                if (slider.classList.contains("feedback-section__slider--info")) options = {
+                    ...options,
+                    perPage: 2,
+                    padding: {
+                        right: "149px"
+                    },
+                    breakpoints: {
+                        ...options.breakpoints,
+                        767.98: {
+                            padding: {
+                                right: "50px"
+                            }
+                        },
+                        399.98: {
+                            padding: {
+                                right: "0"
+                            }
+                        }
+                    }
+                };
+                if (slider.classList.contains("block-about__slider")) options = {
+                    ...options,
+                    perPage: 2,
+                    gap: 24,
+                    padding: {
+                        right: "159px"
+                    },
+                    breakpoints: {
+                        ...options.breakpoints,
+                        767.98: {
+                            padding: {
+                                right: "50px"
+                            }
+                        },
+                        549.98: {
+                            padding: {
+                                right: "0"
+                            }
+                        }
+                    }
+                };
                 function refreshButtons() {
                     if (slider.closest("[hidden]") !== null) return;
                     if (prevArrow) prevArrow.disabled = splideInstance.index === 0;
@@ -6201,9 +6296,8 @@
                         }
                     }
                 });
-                splideInstance.on("mounted move", (function() {
-                    document.querySelector(".digit-pagination__current").textContent = splideInstance.index + 1;
-                    document.querySelector(".digit-pagination__total").textContent = splideInstance.length;
+                if (slider.querySelector(".digit-pagination")) splideInstance.on("mounted move", (function() {
+                    updateDigitPagination(splideInstance, slider);
                 }));
                 splideInstance.mount();
             }));
@@ -6237,6 +6331,35 @@
                     mainSlider.sync(thumbnailSlider);
                 }
             }
+            const brandingSliders = document.querySelectorAll(".gallery-branding__slider");
+            brandingSliders.forEach((slider => {
+                const splideInstance = new splide_esm_Splide(slider, {
+                    perPage: 3,
+                    focus: 0,
+                    arrows: true,
+                    omitEnd: true,
+                    pagination: true,
+                    gap: "1rem",
+                    breakpoints: {
+                        767.98: {
+                            arrows: false,
+                            perPage: 2
+                        },
+                        449.98: {
+                            perPage: 1,
+                            padding: {
+                                right: "1rem",
+                                left: "1rem"
+                            },
+                            gap: "0.5rem"
+                        }
+                    }
+                });
+                if (slider.querySelector(".digit-pagination")) splideInstance.on("mounted move", (function() {
+                    updateDigitPagination(splideInstance, slider);
+                }));
+                splideInstance.mount();
+            }));
         }));
         function isObject_isObject(value) {
             var type = typeof value;
@@ -7547,11 +7670,28 @@
                 bodyLockToggle();
             }
         }));
+        const mapEl = document.getElementById("map");
+        function initMap() {
+            const coordinates = mapEl.getAttribute("data-coordinates").split(",");
+            const lat = parseFloat(coordinates[0]);
+            const lng = parseFloat(coordinates[1]);
+            let mapProp = {
+                center: new google.maps.LatLng(lat, lng),
+                zoom: 13
+            };
+            let map = new google.maps.Map(mapEl, mapProp);
+            new google.maps.Marker({
+                position: new google.maps.LatLng(lat, lng),
+                map
+            });
+        }
+        if (mapEl) window.onload = initMap;
         window["FLS"] = false;
         menuInit();
         spoilers();
         tabs();
         showMore();
+        formRating();
         pageNavigation();
     })();
 })();
